@@ -7,6 +7,7 @@
     <string name="create_company">Crear empresa</string>
     <string name="success_company_add">Empresa almacenada exitosamente.</string>
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
+    <string name="error_login">Existió un error al momento de realizar la petición, intente nuevamente.</string>
     <string name="new_company">Nueva empresa</string>
     <string name="worker">Trabajador</string>
     <string name="name">* Nombre</string>
