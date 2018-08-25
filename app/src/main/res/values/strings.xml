@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ErgoMotions</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">INGRESAR</string>
+    <string name="register">REGISTRARSE</string>
+    <string name="create_company">Crear empresa</string>
+    <string name="success_company_add">Empresa almacenada exitosamente.</string>
+    <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
+    <string name="new_company">Nueva empresa</string>
+    <string name="worker">Trabajador</string>
+    <string name="date">* Fecha</string>
+    <string name="department">* Departamento</string>
+    <string name="city">* Municipio/Ciudad</string>
+    <string name="nit">* Razón social</string>
+    <string name="please_wait">Por favor, espera.. </string>
+</resources>
