@@ -9,9 +9,30 @@
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
     <string name="new_company">Nueva empresa</string>
     <string name="worker">Trabajador</string>
-    <string name="date">* Fecha</string>
+    <string name="name">* Nombre</string>
+    <string name="date">* Fecha de constitucion</string>
     <string name="department">* Departamento</string>
     <string name="city">* Municipio/Ciudad</string>
     <string name="nit">* Razón social</string>
     <string name="please_wait">Por favor, espera.. </string>
+    <string name="uplodad_form">Subir información</string>
+    <string name="add_employee">Agregar empleado nuevo</string>
+    
+    <string name="one">Información del trabajor</string>
+    <string name="two">Su trabajo</string>
+    <string name="three">Hábitos</string>
+    <string name="four">Su estado de salud</string>
+    <string name="five">Su estado de salud</string>
+    <string name="six">Nuca</string>
+    <string name="seven">Hombro</string>
+    <string name="eigth">Codo</string>
+    <string name="nine">Antebrazo</string>
+    <string name="ten">Muñeca</string>
+    <string name="eleven">Mano</string>
+    <string name="twelve">Dedos</string>
+    <string name="thirteen">Espalda alta</string>
+    <string name="fourteen">Espalda baja</string>
+    <string name="fifteen">Cadera</string>
+
 </resources>
+
