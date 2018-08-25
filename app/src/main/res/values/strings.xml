@@ -9,7 +9,8 @@
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
     <string name="new_company">Nueva empresa</string>
     <string name="worker">Trabajador</string>
-    <string name="date">* Fecha</string>
+    <string name="name">* Nombre</string>
+    <string name="date">* Fecha de constitucion</string>
     <string name="department">* Departamento</string>
     <string name="city">* Municipio/Ciudad</string>
     <string name="nit">* Razón social</string>

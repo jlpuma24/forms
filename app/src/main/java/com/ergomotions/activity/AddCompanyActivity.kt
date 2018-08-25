@@ -55,7 +55,7 @@ class AddCompanyActivity : AppCompatActivity() {
                 .build()
 
         val service = retrofit.create<ApiService>(ApiService::class.java)
-        service.addCompany(CompanyRequest("", editTextNit.text.toString(),
+        service.addCompany(CompanyRequest(editTextName.text.toString(), editTextNit.text.toString(),
                 editTextCity.text.toString(), editTextDeparment.text.toString(),
                 editTextDate.text.toString())).enqueue(object : Callback<CompanyResponse> {
             override fun onResponse(call: Call<CompanyResponse>, response: Response<CompanyResponse>) {
@@ -77,7 +77,7 @@ class AddCompanyActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setMessage(getString(R.string.success_company_add))
         builder.setCancelable(false)
-        builder.setPositiveButton(message) { dialog , _ ->
+        builder.setPositiveButton(getString(android.R.string.yes)) { dialog , _ ->
             if (!isError) {
                 startActivity(Intent(applicationContext, EmployeeMainActivity::class.java))
                 finish()
