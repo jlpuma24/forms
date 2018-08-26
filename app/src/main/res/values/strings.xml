@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">ErgoMotions</string>
+    <string name="app_name">SIN-DME</string>
     <string name="user">Usuario</string>
     <string name="password">Contraseña</string>
     <string name="login">INGRESAR</string>
@@ -35,6 +35,36 @@
     <string name="fourteen">Espalda baja</string>
     <string name="fifteen">Cadera</string>
     <string name="companies_list">Lista de empresas</string>
+
+    <string name="names">* Nombres</string>
+    <string name="lastnames">* Apellidos</string>
+    <string name="id">* Número de identificación</string>
+    <string name="sex">* Sexo</string>
+    <string name="weight">* Peso (kg)</string>
+    <string name="height">* Estatura (cm)</string>
+    <string name="imc">* IMC (kg/m2)</string>
+    <string name="right">* Derecho</string>
+    <string name="left">* Izquierdo</string>
+    <string name="both">* Ambos</string>
+    <string name="age">* Edad</string>
+    <string name="area">* Area o dependencia</string>
+    <string name="years">* Años</string>
+    <string name="months">* Meses</string>
+
+    <string name="smoke_question">* ¿Fuma?</string>
+    <string name="how_many_cigarretes">* ¿Cuántos cigarrilos al día?</string>
+    <string name="how_much_cigarretes">* ¿Hace cuánto tiempo fuma?</string>
+    <string name="job_journey">* ¿Cuál es su jornada de trabajo?</string>
+    <string name="job_journey_duration">* ¿Cuántas horas trabaja al día?</string>
+    <string name="job_journey_variable">* ¿La duración semanal de la jornada es variable?</string>
+    <string name="explain">* Explique</string>
+
+    <string name="since">Antiguedad en el cargo</string>
+    <string name="male">Masculino</string>
+    <string name="female">Femenino</string>
+
+    <string name="yes">Si</string>
+    <string name="no">No</string>
 
     <!--Common fragment-->
 

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import com.ergomotions.R
 import com.ergomotions.fragments.EmployeeInfoFragment
 import com.ergomotions.fragments.GeneralFragment
+import com.ergomotions.fragments.YourWorkFragment
 import com.ergomotions.util.Constants.ITEMS
 
 class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
@@ -14,7 +15,7 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> EmployeeInfoFragment()
-            1 -> EmployeeInfoFragment()
+            1 -> YourWorkFragment()
             2 -> EmployeeInfoFragment()
             3 -> EmployeeInfoFragment()
             4 -> EmployeeInfoFragment()
