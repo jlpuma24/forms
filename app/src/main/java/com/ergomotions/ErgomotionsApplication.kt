@@ -3,6 +3,7 @@ package com.ergomotions
 import android.app.Activity
 import android.app.Application
 import com.ergomotions.di.component.DaggerAppComponent
+import com.ergomotions.util.PrefsUtil
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -17,6 +18,7 @@ class ErgomotionsApplication : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
+        PrefsUtil.initializeInstance(this)
         DaggerAppComponent.builder()
                 .application(this)
                 .build().apply { inject(this@ErgomotionsApplication) }
