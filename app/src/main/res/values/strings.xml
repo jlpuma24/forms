@@ -23,7 +23,6 @@
     <string name="two">Su trabajo</string>
     <string name="three">Hábitos</string>
     <string name="four">Su estado de salud</string>
-    <string name="five">Su estado de salud</string>
     <string name="six">Nuca</string>
     <string name="seven">Hombro</string>
     <string name="eigth">Codo</string>
@@ -58,6 +57,10 @@
     <string name="job_journey_duration">* ¿Cuántas horas trabaja al día?</string>
     <string name="job_journey_variable">* ¿La duración semanal de la jornada es variable?</string>
     <string name="explain">* Explique</string>
+    <string name="do_exercise">* ¿Hace actividad física?</string>
+    <string name="which_activity">* ¿Cuál actividad física realiza?</string>
+    <string name="frequency_activity">* ¿Con que frecuencia?</string>
+    <string name="duration">Duración</string>
 
     <string name="since">Antiguedad en el cargo</string>
     <string name="male">Masculino</string>

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import com.ergomotions.R
 import com.ergomotions.fragments.EmployeeInfoFragment
 import com.ergomotions.fragments.GeneralFragment
+import com.ergomotions.fragments.YourHabitsFragment
 import com.ergomotions.fragments.YourWorkFragment
 import com.ergomotions.util.Constants.ITEMS
 
@@ -16,18 +17,17 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
         return when (position) {
             0 -> EmployeeInfoFragment()
             1 -> YourWorkFragment()
-            2 -> EmployeeInfoFragment()
+            2 -> YourHabitsFragment()
             3 -> EmployeeInfoFragment()
-            4 -> EmployeeInfoFragment()
-            5 -> GeneralFragment.newInstance(GeneralFragment.CERVIX)
-            6 -> GeneralFragment.newInstance(GeneralFragment.SHOULDER)
-            7 -> GeneralFragment.newInstance(GeneralFragment.ELBOW)
-            8 -> GeneralFragment.newInstance(GeneralFragment.FOREARM)
-            9 -> GeneralFragment.newInstance(GeneralFragment.WRIST)
-            10 -> GeneralFragment.newInstance(GeneralFragment.HAND)
-            11 -> GeneralFragment.newInstance(GeneralFragment.FINGER)
-            12 -> GeneralFragment.newInstance(GeneralFragment.LOW_BAG)
-            13 -> GeneralFragment.newInstance(GeneralFragment.HIGH_BAG)
+            4 -> GeneralFragment.newInstance(GeneralFragment.CERVIX)
+            5 -> GeneralFragment.newInstance(GeneralFragment.SHOULDER)
+            6 -> GeneralFragment.newInstance(GeneralFragment.ELBOW)
+            7 -> GeneralFragment.newInstance(GeneralFragment.FOREARM)
+            8 -> GeneralFragment.newInstance(GeneralFragment.WRIST)
+            9 -> GeneralFragment.newInstance(GeneralFragment.HAND)
+            10 -> GeneralFragment.newInstance(GeneralFragment.FINGER)
+            11 -> GeneralFragment.newInstance(GeneralFragment.LOW_BAG)
+            12 -> GeneralFragment.newInstance(GeneralFragment.HIGH_BAG)
             else -> GeneralFragment.newInstance(GeneralFragment.HIP)
         }
     }
@@ -40,16 +40,15 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             1 -> mContext.getString(R.string.two)
             2 -> mContext.getString(R.string.three)
             3 -> mContext.getString(R.string.four)
-            4 -> mContext.getString(R.string.five)
-            5 -> mContext.getString(R.string.six)
-            6 -> mContext.getString(R.string.seven)
-            7 -> mContext.getString(R.string.eigth)
-            8 -> mContext.getString(R.string.nine)
-            9 -> mContext.getString(R.string.ten)
-            10 -> mContext.getString(R.string.eleven)
-            11 -> mContext.getString(R.string.twelve)
-            12 -> mContext.getString(R.string.thirteen)
-            13 -> mContext.getString(R.string.fourteen)
+            4 -> mContext.getString(R.string.six)
+            5 -> mContext.getString(R.string.seven)
+            6 -> mContext.getString(R.string.eigth)
+            7 -> mContext.getString(R.string.nine)
+            8 -> mContext.getString(R.string.ten)
+            9 -> mContext.getString(R.string.eleven)
+            10 -> mContext.getString(R.string.twelve)
+            11 -> mContext.getString(R.string.thirteen)
+            12 -> mContext.getString(R.string.fourteen)
             else -> mContext.getString(R.string.fifteen)
     }
 }
