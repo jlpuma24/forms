@@ -15,5 +15,9 @@ class CompanyMainActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, AddCompanyActivity::class.java))
             finish()
         }
+        companiesList.setOnClickListener {
+            startActivity(Intent(applicationContext, ListCompaniesActivity::class.java))
+            finish()
+        }
     }
 }
