@@ -68,6 +68,11 @@
 
     <string name="yes">Si</string>
     <string name="no">No</string>
+    
+    <string name="pain_first_question">* ¿Durante los últimos 7 días ha presentado dolor, molestias o inconfort en alguna parte del cuerpo?</string>
+    <string name="pain_second_question">* ¿Durante los últimos 7 días usted ha presentado alguna enfermedad?</string>
+    <string name="which_one">* ¿Cúal?</string>
+    <string name="observations">* Observaciones</string>
 
     <!--Common fragment-->
 
