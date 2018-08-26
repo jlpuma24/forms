@@ -10,6 +10,7 @@ import com.ergomotions.network.ApiService
 import com.ergomotions.network.LoginRequest
 import com.ergomotions.network.LoginResponse
 import com.ergomotions.util.Constants
+import com.ergomotions.util.PrefsUtil
 import kotlinx.android.synthetic.main.activity_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -48,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<LoginResponse>?, response: Response<LoginResponse>?) {
                         dialog.dismiss()
                         if (response != null && response.isSuccessful && response.body()?.status == "OK") {
+                            PrefsUtil.getInstance().userData = response.body()
                             startActivity(Intent(applicationContext, CompanyMainActivity::class.java))
                             finish()
                         } else {

@@ -18,8 +18,8 @@ import retrofit2.Retrofit
 import java.util.*
 import android.app.AlertDialog
 import android.content.Intent
+import com.ergomotions.util.PrefsUtil
 import retrofit2.converter.gson.GsonConverterFactory
-
 
 class AddCompanyActivity : AppCompatActivity() {
 
@@ -57,10 +57,11 @@ class AddCompanyActivity : AppCompatActivity() {
         val service = retrofit.create<ApiService>(ApiService::class.java)
         service.addCompany(CompanyRequest(editTextName.text.toString(), editTextNit.text.toString(),
                 editTextCity.text.toString(), editTextDeparment.text.toString(),
-                editTextDate.text.toString())).enqueue(object : Callback<CompanyResponse> {
+                editTextDate.text.toString(), PrefsUtil.getInstance().userData.id)).enqueue(object : Callback<CompanyResponse> {
             override fun onResponse(call: Call<CompanyResponse>, response: Response<CompanyResponse>) {
                 dialog.dismiss()
                 if (response.isSuccessful && response.body() != null && response.body()!!.status == "OK") {
+                    PrefsUtil.getInstance().companyId = response.body()?.id!!
                     showResponseMessage(getString(R.string.success_company_add), false)
                 } else {
                     showResponseMessage(getString(R.string.error_company_add), true)
@@ -75,7 +76,7 @@ class AddCompanyActivity : AppCompatActivity() {
 
     private fun showResponseMessage(message: String, isError: Boolean) {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage(getString(R.string.success_company_add))
+        builder.setMessage(if (!isError) getString(R.string.success_company_add) else message)
         builder.setCancelable(false)
         builder.setPositiveButton(getString(android.R.string.yes)) { dialog , _ ->
             if (!isError) {
