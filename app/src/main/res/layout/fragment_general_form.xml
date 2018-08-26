@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="10dp"
-        android:background="#57bded"
-        android:gravity="center"
-        android:textColor="#041c4e"
-        android:textSize="21sp"
-        tools:text="Nuca" />
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ergomotions.viewModels.GeneralViewModel" />
+
+    </data>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -24,7 +19,8 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline_left"
@@ -68,12 +64,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:text="@{ viewModel.headerDescription }"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@+id/imageView_header"
-                tools:text="@string/common.nuca_first" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView_header" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/textView_question_a"
@@ -84,12 +80,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.firstQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@+id/textView_header"
-                tools:text="@string/common.nuca_question_a" />
+                app:layout_constraintTop_toBottomOf="@+id/textView_header" />
 
             <ToggleButton
                 android:id="@+id/button_option_a"
@@ -99,8 +95,8 @@
                 android:background="@drawable/toggle_selector"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
-                android:textOff="@string/common.nuca_left_side"
-                android:textOn="@string/common.nuca_left_side"
+                android:textOff="@string/common.left_side"
+                android:textOn="@string/common.left_side"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@+id/textView_question_a"
@@ -113,8 +109,8 @@
                 android:background="@drawable/toggle_selector"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
-                android:textOff="@string/common.nuca_right_side"
-                android:textOn="@string/common.nuca_right_side"
+                android:textOff="@string/common.right_side"
+                android:textOn="@string/common.right_side"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintTop_toBottomOf="@id/button_option_a"
@@ -130,8 +126,8 @@
                 android:background="@drawable/toggle_selector"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
-                android:textOff="@string/common.nuca_both"
-                android:textOn="@string/common.nuca_both"
+                android:textOff="@string/common.both"
+                android:textOn="@string/common.both"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -147,12 +143,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.secondQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/button_option_c"
-                tools:text="@string/common.nuca_question_b" />
+                app:layout_constraintTop_toBottomOf="@id/button_option_c" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_a"
@@ -180,12 +176,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.thirdQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_a"
-                tools:text="@string/common.nuca_question_c" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_a" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_b"
@@ -213,12 +209,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.forthQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_b"
-                tools:text="@string/common.nuca_question_d" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_b" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_c"
@@ -246,12 +242,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.fifthQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_c"
-                tools:text="@string/common.nuca_question_e" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_c" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_d"
@@ -279,12 +275,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.sixQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_d"
-                tools:text="@string/common.nuca_question_f" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_d" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_e"
@@ -312,12 +308,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.sevenQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_e"
-                tools:text="@string/common.nuca_question_g" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_e" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_f"
@@ -345,12 +341,12 @@
                 android:drawableLeft="@drawable/ic_option"
                 android:drawablePadding="6dp"
                 android:gravity="center_vertical"
+                android:text="@{ viewModel.eightQuestion }"
                 android:textColor="#e6000000"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
-                app:layout_constraintTop_toBottomOf="@id/layout_spinner_f"
-                tools:text="@string/common.nuca_question_h" />
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_f" />
 
             <FrameLayout
                 android:id="@+id/layout_spinner_g"
@@ -371,9 +367,8 @@
 
             </FrameLayout>
 
-
         </android.support.constraint.ConstraintLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-</LinearLayout>
+</layout>
