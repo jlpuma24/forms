@@ -82,4 +82,11 @@ object Constants {
     val FREQUENCY_LIST: ArrayList<String> = arrayListOf(FIFTEEN_MINUTES, THIRTY_MINUTES, ONE_HOUR, MORE_THAN_ONE_HOUR)
     val PAIN_LEVEL_WORK_LIST: ArrayList<String> = arrayListOf(NOTHING_AT_ALL, LITTLE_INTERFERENCE, SUBSTANTIAL_INTERFERENCE)
 
+    fun getHowManyCigarretesList() : ArrayList<String> {
+        val result = ArrayList<String>()
+        HOW_MANY_CIGARRETES_LIST.map { result.add(it.toString()) }
+        return result
+    }
+
+
 }
