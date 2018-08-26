@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="10dp"
+        android:background="#57bded"
+        android:gravity="center"
+        android:textColor="#041c4e"
+        android:textSize="21sp"
+        tools:text="Nuca" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.039" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.059" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageView_header"
+                android:layout_width="0dp"
+                android:layout_height="89dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/imageView_header"
+                tools:text="@string/common.nuca_first" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_a"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/textView_header"
+                tools:text="@string/common.nuca_question_a" />
+
+            <ToggleButton
+                android:id="@+id/button_option_a"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/common.nuca_left_side"
+                android:textOn="@string/common.nuca_left_side"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/textView_question_a"
+                app:layout_constraintWidth_percent="0.347" />
+
+            <ToggleButton
+                android:id="@+id/button_option_b"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/common.nuca_right_side"
+                android:textOn="@string/common.nuca_right_side"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/button_option_a"
+                app:layout_constraintTop_toTopOf="@+id/button_option_a"
+                app:layout_constraintWidth_percent="0.347"
+                tools:checked="true" />
+
+            <ToggleButton
+                android:id="@+id/button_option_c"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/common.nuca_both"
+                android:textOn="@string/common.nuca_both"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_option_a"
+                app:layout_constraintWidth_percent="0.347" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_b"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/button_option_c"
+                tools:text="@string/common.nuca_question_b" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_a"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_b">
+
+                <Spinner
+                    android:id="@+id/spinner_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_c"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_a"
+                tools:text="@string/common.nuca_question_c" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_b"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_c">
+
+                <Spinner
+                    android:id="@+id/spinner_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_d"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_b"
+                tools:text="@string/common.nuca_question_d" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_c"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_d">
+
+                <Spinner
+                    android:id="@+id/spinner_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_e"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_c"
+                tools:text="@string/common.nuca_question_e" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_d"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_e">
+
+                <Spinner
+                    android:id="@+id/spinner_d"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_f"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_d"
+                tools:text="@string/common.nuca_question_f" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_e"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_f">
+
+                <Spinner
+                    android:id="@+id/spinner_e"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_g"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_e"
+                tools:text="@string/common.nuca_question_g" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_f"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_g">
+
+                <Spinner
+                    android:id="@+id/spinner_f"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView_question_h"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_option"
+                android:drawableLeft="@drawable/ic_option"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:textColor="#e6000000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/layout_spinner_f"
+                tools:text="@string/common.nuca_question_h" />
+
+            <FrameLayout
+                android:id="@+id/layout_spinner_g"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/widgets_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guideline_right"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@id/textView_question_h">
+
+                <Spinner
+                    android:id="@+id/spinner_g"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
