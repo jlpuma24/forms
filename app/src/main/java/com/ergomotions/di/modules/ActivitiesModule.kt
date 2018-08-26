@@ -9,6 +9,9 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivitiesModule {
 
     @ActivityScope
-    @ContributesAndroidInjector(modules = [FragmentModule::class])
+    @ContributesAndroidInjector(modules = [
+        FragmentModule::class,
+        ViewModelModule::class
+    ])
     abstract fun bindAddEmployeeActivity(): AddEmployeeActivity
 }

@@ -163,7 +163,10 @@
                 <Spinner
                     android:id="@+id/spinner_a"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.secondQuestionEntries }"
+                    app:selectedValue="@={ viewModel.secondAnswer }" />
 
             </FrameLayout>
 
@@ -196,7 +199,10 @@
                 <Spinner
                     android:id="@+id/spinner_b"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.thirdQuestionEntries }"
+                    app:selectedValue="@={ viewModel.thirdAnswer }"/>
 
             </FrameLayout>
 
@@ -229,7 +235,10 @@
                 <Spinner
                     android:id="@+id/spinner_c"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.forthQuestionEntries }"
+                    app:selectedValue="@={ viewModel.forthAnswer }"/>
 
             </FrameLayout>
 
@@ -262,7 +271,10 @@
                 <Spinner
                     android:id="@+id/spinner_d"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.fifthQuestionEntries }"
+                    app:selectedValue="@={ viewModel.fifthAnswer }"/>
 
             </FrameLayout>
 
@@ -295,7 +307,10 @@
                 <Spinner
                     android:id="@+id/spinner_e"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.sixQuestionEntries }"
+                    app:selectedValue="@={ viewModel.sixAnswer }"/>
 
             </FrameLayout>
 
@@ -328,7 +343,10 @@
                 <Spinner
                     android:id="@+id/spinner_f"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.sevenQuestionEntries }"
+                    app:selectedValue="@={ viewModel.sevenAnswer }"/>
 
             </FrameLayout>
 
@@ -363,7 +381,10 @@
                 <Spinner
                     android:id="@+id/spinner_g"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    app:entries="@{ viewModel.eightQuestionEntries }"
+                    app:selectedValue="@={ viewModel.eightAnswer }"/>
 
             </FrameLayout>
 

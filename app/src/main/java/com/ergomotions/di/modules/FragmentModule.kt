@@ -7,6 +7,6 @@ import dagger.android.ContributesAndroidInjector
 @Module
 abstract class FragmentModule {
 
-    @ContributesAndroidInjector(modules = [ViewModelModule::class])
+    @ContributesAndroidInjector()
     abstract fun bindGeneralFragment(): GeneralFragment
 }
