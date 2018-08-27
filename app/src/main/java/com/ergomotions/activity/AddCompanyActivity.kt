@@ -57,7 +57,7 @@ class AddCompanyActivity : AppCompatActivity() {
         val service = retrofit.create<ApiService>(ApiService::class.java)
         service.addCompany(CompanyRequest(editTextName.text.toString(), editTextNit.text.toString(),
                 editTextCity.text.toString(), editTextDeparment.text.toString(),
-                editTextDate.text.toString(), PrefsUtil.getInstance().userData.id)).enqueue(object : Callback<CompanyResponse> {
+                editTextDate.text.toString(), PrefsUtil.getInstance().userData.id, arrayListOf())).enqueue(object : Callback<CompanyResponse> {
             override fun onResponse(call: Call<CompanyResponse>, response: Response<CompanyResponse>) {
                 dialog.dismiss()
                 if (response.isSuccessful && response.body() != null && response.body()!!.status == "OK") {

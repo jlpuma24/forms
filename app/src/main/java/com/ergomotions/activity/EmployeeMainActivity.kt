@@ -24,6 +24,11 @@ class EmployeeMainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_employee_main)
         employeeAdd.setOnClickListener {
             startActivity(Intent(applicationContext, AddEmployeeActivity::class.java))
+            finish()
+        }
+        employeeEdit.setOnClickListener {
+            startActivity(Intent(applicationContext, ListEmployeeActivity::class.java))
+            finish()
         }
         doLogin()
     }

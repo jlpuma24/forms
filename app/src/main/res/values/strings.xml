@@ -34,6 +34,8 @@
     <string name="fourteen">Espalda baja</string>
     <string name="fifteen">Cadera</string>
     <string name="companies_list">Lista de empresas</string>
+    <string name="employees_list">Lista de empleados</string>
+    <string name="no_employees">Esta empresa aún no tiene empleados registrados</string>
 
     <string name="names">* Nombres</string>
     <string name="lastnames">* Apellidos</string>

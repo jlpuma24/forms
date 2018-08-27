@@ -1,5 +1,7 @@
 package com.ergomotions.util
 
+import com.ergomotions.network.Employee
+
 object Constants {
 
     const val SPLASH_DISPLAY_LENGTH = 1500L
@@ -88,5 +90,5 @@ object Constants {
         return result
     }
 
-
+    fun getEmployeesList() = PrefsUtil.getInstance().userData.companies.firstOrNull { it.id == PrefsUtil.getInstance().companyId }?.employees
 }
