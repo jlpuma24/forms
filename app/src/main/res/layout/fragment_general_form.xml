@@ -93,6 +93,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/toggle_selector"
+                android:checked="@={ viewModel.firstButton }"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
                 android:textOff="@string/common.left_side"
@@ -107,6 +108,7 @@
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:background="@drawable/toggle_selector"
+                android:checked="@={ viewModel.secondButton }"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
                 android:textOff="@string/common.right_side"
@@ -124,6 +126,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/toggle_selector"
+                android:checked="@={ viewModel.thirdButton }"
                 android:textAllCaps="false"
                 android:textColor="@drawable/text_color_selector"
                 android:textOff="@string/common.both"
@@ -165,6 +168,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.secondQuestionEntries }"
                     app:selectedValue="@={ viewModel.secondAnswer }" />
 
@@ -201,8 +205,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.thirdQuestionEntries }"
-                    app:selectedValue="@={ viewModel.thirdAnswer }"/>
+                    app:selectedValue="@={ viewModel.thirdAnswer }" />
 
             </FrameLayout>
 
@@ -237,8 +242,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.forthQuestionEntries }"
-                    app:selectedValue="@={ viewModel.forthAnswer }"/>
+                    app:selectedValue="@={ viewModel.forthAnswer }" />
 
             </FrameLayout>
 
@@ -273,8 +279,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.fifthQuestionEntries }"
-                    app:selectedValue="@={ viewModel.fifthAnswer }"/>
+                    app:selectedValue="@={ viewModel.fifthAnswer }" />
 
             </FrameLayout>
 
@@ -309,8 +316,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.sixQuestionEntries }"
-                    app:selectedValue="@={ viewModel.sixAnswer }"/>
+                    app:selectedValue="@={ viewModel.sixAnswer }" />
 
             </FrameLayout>
 
@@ -345,8 +353,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.sevenQuestionEntries }"
-                    app:selectedValue="@={ viewModel.sevenAnswer }"/>
+                    app:selectedValue="@={ viewModel.sevenAnswer }" />
 
             </FrameLayout>
 
@@ -383,8 +392,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:spinnerMode="dialog"
                     app:entries="@{ viewModel.eightQuestionEntries }"
-                    app:selectedValue="@={ viewModel.eightAnswer }"/>
+                    app:selectedValue="@={ viewModel.eightAnswer }" />
 
             </FrameLayout>
 

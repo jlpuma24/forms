@@ -1,5 +1,6 @@
 package com.ergomotions.fragments
 
+import android.arch.lifecycle.LifecycleObserver
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -56,7 +57,9 @@ class GeneralFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.viewModel = viewModelMap[arguments.getString(TYPE).orEmpty()]
+        val generalViewModel = viewModelMap[arguments.getString(TYPE).orEmpty()]
+        lifecycle.addObserver(generalViewModel as LifecycleObserver)
+        binding.viewModel = generalViewModel
     }
 
 }
