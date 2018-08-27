@@ -39,6 +39,7 @@ class LoginActivity : AppCompatActivity() {
                 .build()
 
         val service = retrofit.create<ApiService>(ApiService::class.java)
+        PrefsUtil.getInstance().setUserCredentials(editTextUsername.text.toString(), editTextPassword.text.toString())
         service.login(LoginRequest(editTextUsername.text.toString(), editTextPassword.text.toString()))
                 .enqueue(object : Callback<LoginResponse> {
                     override fun onFailure(call: Call<LoginResponse>?, t: Throwable?) {

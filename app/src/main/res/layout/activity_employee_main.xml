@@ -43,21 +43,6 @@
             android:scaleType="centerInside"
             android:src="@drawable/add_employee" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/black" />
-
-        <ImageView
-            android:id="@+id/employeeList"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_marginTop="5dp"
-            android:scaleType="centerInside"
-            android:src="@drawable/employee_list" />
-
     </LinearLayout>
 
 </LinearLayout>
