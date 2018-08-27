@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.ergomotions.R
 import com.ergomotions.adapter.SimpleFragmentPagerAdapter
 import com.ergomotions.viewModels.GeneralViewModel
@@ -43,14 +44,20 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-//        when (item?.itemId) {
+        if (viewModelMap.values.any { it.provideData().firstResponse.isBlank() }) {
+            Toast.makeText(this, "Por favor llenar las opciones de todos los formularios", Toast.LENGTH_SHORT).show()
+        } else {
+            processResponse()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun processResponse() {
         viewModelMap.entries.forEach {
             val value = it.value
             val key = it.key
             Log.d("Jose Degug", "Para $key el valor es ${value.provideData()}")
         }
-//        }
-        return super.onOptionsItemSelected(item)
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> {

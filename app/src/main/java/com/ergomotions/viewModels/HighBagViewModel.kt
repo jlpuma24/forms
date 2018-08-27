@@ -5,4 +5,10 @@ import javax.inject.Inject
 
 class HighBagViewModel @Inject constructor(
         resourceProvider: IResourceProvider
-) : GeneralViewModel(resourceProvider)
+) : GeneralViewModel(resourceProvider) {
+
+    override fun provideData(): GeneralFormData {
+        return super.provideData().copy(id = 9)
+    }
+
+}

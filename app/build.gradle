@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 def GOOGLE_APIS_VERSION = '26.1.0'
 def DAGGER_VERSION = '2.14.1'
+def RX_VERSION = '2.1.0'
 
 android {
     compileSdkVersion 28
@@ -53,6 +54,9 @@ dependencies {
     implementation 'com.google.dagger:dagger-android-support:' + DAGGER_VERSION
     kapt 'com.google.dagger:dagger-compiler:' + DAGGER_VERSION
     kapt 'com.google.dagger:dagger-android-processor:' + DAGGER_VERSION
+
+    // Rx
+    implementation 'io.reactivex.rxjava2:rxandroid:' + RX_VERSION
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

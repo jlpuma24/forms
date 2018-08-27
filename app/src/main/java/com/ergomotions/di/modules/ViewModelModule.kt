@@ -8,6 +8,7 @@ import com.ergomotions.viewModels.FingerViewModel
 import com.ergomotions.viewModels.ForeArmViewModel
 import com.ergomotions.viewModels.GeneralViewModel
 import com.ergomotions.viewModels.HandViewModel
+import com.ergomotions.viewModels.HighBagViewModel
 import com.ergomotions.viewModels.HipViewModel
 import com.ergomotions.viewModels.LowBagViewModel
 import com.ergomotions.viewModels.ShoulderViewModel
@@ -72,7 +73,7 @@ abstract class ViewModelModule {
     @IntoMap
     @ActivityScope
     @StringKey(GeneralFragment.HIGH_BAG)
-    abstract fun bindHighBagViewModel(cervixViewModel: CervixViewModel): GeneralViewModel
+    abstract fun bindHighBagViewModel(cervixViewModel: HighBagViewModel): GeneralViewModel
 
     @Binds
     @IntoMap
