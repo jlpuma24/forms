@@ -25,6 +25,7 @@
     <string name="four">Su estado de salud</string>
     <string name="six">Nuca</string>
     <string name="seven">Hombro</string>
+    <string name="new_eigth">Brazo</string>
     <string name="eigth">Codo</string>
     <string name="nine">Antebrazo</string>
     <string name="ten">Muñeca</string>
@@ -83,7 +84,7 @@
     <string name="common.left_side" tools:ignore="ExtraTranslation">Lado izquierdo</string>
     <string name="common.right_side" tools:ignore="ExtraTranslation">Lado derecho</string>
     <string name="common.both" tools:ignore="ExtraTranslation">Ambos</string>
-    <string name="common.question_a" tools:ignore="ExtraTranslation">1. Tengo molestias en la cadera</string>
+    <string name="common.question_a" tools:ignore="ExtraTranslation">1. Tengo molestias en %1$s</string>
     <string name="common.question_b" tools:ignore="ExtraTranslation">2. Generalmente se presentan como:</string>
     <string name="common.question_c" tools:ignore="ExtraTranslation">3. Los síntomas se presentan cuando:</string>
     <string name="common.question_d" tools:ignore="ExtraTranslation">4. Los tengo desde hace:</string>

@@ -2,6 +2,7 @@ package com.ergomotions.di.modules
 
 import com.ergomotions.di.ActivityScope
 import com.ergomotions.fragments.GeneralFragment
+import com.ergomotions.viewModels.ArmViewModel
 import com.ergomotions.viewModels.CervixViewModel
 import com.ergomotions.viewModels.ElbowViewModel
 import com.ergomotions.viewModels.FingerViewModel
@@ -32,6 +33,12 @@ abstract class ViewModelModule {
     @ActivityScope
     @StringKey(GeneralFragment.SHOULDER)
     abstract fun bindShoulderViewModel(cervixViewModel: ShoulderViewModel): GeneralViewModel
+
+    @Binds
+    @IntoMap
+    @ActivityScope
+    @StringKey(GeneralFragment.ARM)
+    abstract fun bindArmViewModel(cervixViewModel: ArmViewModel): GeneralViewModel
 
     @Binds
     @IntoMap
