@@ -52,9 +52,9 @@
 
             <android.support.v7.widget.AppCompatImageView
                 android:id="@+id/imageView_header"
+                android:src="@{ viewModel.headerBanner }"
                 android:layout_width="0dp"
                 android:layout_height="89dp"
-                android:background="@drawable/widgets_background"
                 app:layout_constraintEnd_toEndOf="@id/guideline_end"
                 app:layout_constraintStart_toStartOf="@id/guideline_start" />
 

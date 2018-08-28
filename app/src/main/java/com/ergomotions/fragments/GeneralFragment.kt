@@ -18,6 +18,7 @@ class GeneralFragment : Fragment() {
 
         const val CERVIX = "CERVIX"
         const val SHOULDER = "SHOULDER"
+        const val ARM = "ARM"
         const val ELBOW = "ELBOW"
         const val FOREARM = "FOREARM"
         const val WRIST = "WRIST"

@@ -5,6 +5,7 @@ import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.OnLifecycleEvent
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
+import android.graphics.drawable.Drawable
 import com.ergomotions.R
 import com.ergomotions.di.helpers.IResourceProvider
 import com.ergomotions.util.Constants.PAIN_AGO_LIST
@@ -22,6 +23,7 @@ abstract class GeneralViewModel(
 ) : LifecycleObserver {
 
     // This is in case the want to change the question for a muscular group, otherwise we just need to add them to teh xml
+    val headerBanner = ObservableField<Drawable>()
     val headerDescription = ObservableField<String>()
     val firstQuestion = ObservableField<String>()
     val secondQuestion = ObservableField<String>()
@@ -59,7 +61,6 @@ abstract class GeneralViewModel(
 
     init {
         headerDescription.set(resourceProvider.getString(R.string.common_first))
-        firstQuestion.set(resourceProvider.getString(R.string.common_question_a))
         secondQuestion.set(resourceProvider.getString(R.string.common_question_b))
         thirdQuestion.set(resourceProvider.getString(R.string.common_question_c))
         forthQuestion.set(resourceProvider.getString(R.string.common_question_d))
