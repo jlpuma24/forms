@@ -19,5 +19,8 @@ class CompanyMainActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext, ListCompaniesActivity::class.java))
             finish()
         }
+        helpButton.setOnClickListener {
+            startActivity(Intent(applicationContext, HelpActivity::class.java))
+        }
     }
 }

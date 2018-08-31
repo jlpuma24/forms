@@ -43,6 +43,9 @@
         <activity
             android:name=".activity.ListEmployeeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

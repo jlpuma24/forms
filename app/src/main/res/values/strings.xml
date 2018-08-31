@@ -5,6 +5,7 @@
     <string name="login">INGRESAR</string>
     <string name="register">REGISTRARSE</string>
     <string name="create_company">Crear empresa</string>
+    <string name="help">Ayuda</string>
     <string name="success_company_add">Empresa almacenada exitosamente.</string>
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
     <string name="error_login">Existió un error al momento de realizar la petición, intente nuevamente.</string>
