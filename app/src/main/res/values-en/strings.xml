@@ -1,0 +1,98 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SIN-DME</string>
+    <string name="user">Username</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTRARSE</string>
+    <string name="create_company">Create company</string>
+    <string name="help">Help</string>
+    <string name="success_company_add">Company added successfully.</string>
+    <string name="error_company_add">There is an error at moment of store the company.</string>
+    <string name="error_login">There is an error on the request, please try again.</string>
+    <string name="new_company">New Company</string>
+    <string name="worker">Employee</string>
+    <string name="name">* Name</string>
+    <string name="date">* Constitution Date</string>
+    <string name="department">* Departament</string>
+    <string name="city">* City</string>
+    <string name="nit">* ID</string>
+    <string name="please_wait">Please wait.. </string>
+    <string name="uplodad_form">Upload información</string>
+    <string name="add_employee">Add new employee</string>
+
+    <string name="one">Worker information</string>
+    <string name="two">Your work</string>
+    <string name="three">Habits</string>
+    <string name="four">Your state of health</string>
+    <string name="six">Neck</string>
+    <string name="seven">Shoulder</string>
+    <string name="new_eigth">Arm</string>
+    <string name="eigth">Elbow</string>
+    <string name="nine">Forearm</string>
+    <string name="ten">Wrist</string>
+    <string name="eleven">Hand</string>
+    <string name="twelve">Toes</string>
+    <string name="thirteen">Upper back</string>
+    <string name="fourteen">Lower back</string>
+    <string name="fifteen">Hip</string>
+    <string name="companies_list">Companies list</string>
+    <string name="employees_list">Employees list</string>
+    <string name="no_employees">Esta empresa aún no tiene empleados registrados</string>
+
+    <string name="names">* Names</string>
+    <string name="lastnames">* Lastnames</string>
+    <string name="id">* ID</string>
+    <string name="sex">* Seo</string>
+    <string name="weight">* Weight (kg)</string>
+    <string name="height">* Height (cm)</string>
+    <string name="imc">* IMC (kg/m2)</string>
+    <string name="right">* Right</string>
+    <string name="left">* Left</string>
+    <string name="both">* Both</string>
+    <string name="age">* Age</string>
+    <string name="area">* Area or dependency</string>
+    <string name="years">* Years</string>
+    <string name="months">* Months</string>
+
+    <string name="smoke_question">* ¿Smoke?</string>
+    <string name="how_many_cigarretes">* How many cigarettes at day?</string>
+    <string name="how_much_cigarretes">*  How long have you been smoking?</string>
+    <string name="job_journey">*  What is your working day?</string>
+    <string name="job_journey_duration">* How many hours do you work per day?</string>
+    <string name="job_journey_variable">* Is the weekly duration of the day variable?</string>
+    <string name="explain">* Explain</string>
+    <string name="do_exercise">* Do you do physical activity?</string>
+    <string name="which_activity">*  Which one?</string>
+    <string name="frequency_activity">* Frequency</string>
+    <string name="duration">Duration</string>
+
+    <string name="since">Post seniority</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="pain_first_question">* Have you experienced any pain, complaints or discomfort in any part of your body in the past 7 days?</string>
+    <string name="pain_second_question">* In the last 7 days, have you had any illnesses? </string>
+    <string name="which_one">* Which one?</string>
+    <string name="observations">* Observations</string>
+
+    <!--Common fragment-->
+
+    <string name="common.title">Neck</string>
+    <string name="common.first">\u2022 According to the body parts you identify on each chart, select the places where you have discomfort:</string>
+    <string name="common.left_side">Left side</string>
+    <string name="common.right_side">Right sideo</string>
+    <string name="common.both">Both</string>
+    <string name="common.question_a">1. I have discomfort in my %1$s</string>
+    <string name="common.question_b">2. They are usually presented as:</string>
+    <string name="common.question_c">3. Symptoms occur when:</string>
+    <string name="common.question_d">4. I\'ve had them for a long time:</string>
+    <string name="common.question_e">5. They remain for:</string>
+    <string name="common.question_f">6. If you have PAIN, then select its INTENSITY:</string>
+    <string name="common.question_g">7. If you experienced discomfort, pain, or distress, how uncomfortable was this?</string>
+    <string name="common.question_h">8. If you experienced pain, how much did it interfere with your ability to work?</string>
+
+</resources>
+

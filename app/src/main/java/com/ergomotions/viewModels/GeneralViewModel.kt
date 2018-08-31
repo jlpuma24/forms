@@ -15,8 +15,10 @@ import com.ergomotions.util.Constants.PAIN_LEVEL_LIST
 import com.ergomotions.util.Constants.PAIN_LEVEL_WORK_LIST
 import com.ergomotions.util.Constants.PAIN_PRESENTED_HOW_LIST
 import com.ergomotions.util.Constants.PAIN_WHEN_LIST
+import com.ergomotions.util.EnglishConstants
 import com.ergomotions.util.toObservable
 import io.reactivex.disposables.CompositeDisposable
+import java.util.*
 
 abstract class GeneralViewModel(
         private val resourceProvider: IResourceProvider
@@ -35,22 +37,22 @@ abstract class GeneralViewModel(
     val eightQuestion = ObservableField<String>()
 
     // Im putting some generic data
-    val secondQuestionEntries = ObservableField<List<String>>(PAIN_PRESENTED_HOW_LIST)
-    val thirdQuestionEntries = ObservableField<List<String>>(PAIN_WHEN_LIST)
-    val forthQuestionEntries = ObservableField<List<String>>(PAIN_AGO_LIST)
-    val fifthQuestionEntries = ObservableField<List<String>>(PAIN_DURATION_LIST)
+    val secondQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_PRESENTED_HOW_LIST else PAIN_PRESENTED_HOW_LIST)
+    val thirdQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_WHEN_LIST else PAIN_WHEN_LIST)
+    val forthQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_AGO_LIST else PAIN_AGO_LIST)
+    val fifthQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_DURATION_LIST else PAIN_DURATION_LIST)
     val sixQuestionEntries = ObservableField<List<String>>(PAIN_INTENSITY_LIST.map { it.toString() })
-    val sevenQuestionEntries = ObservableField<List<String>>(PAIN_LEVEL_LIST)
-    val eightQuestionEntries = ObservableField<List<String>>(PAIN_LEVEL_WORK_LIST)
+    val sevenQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_LEVEL_LIST else PAIN_LEVEL_LIST)
+    val eightQuestionEntries = ObservableField<List<String>>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_LEVEL_WORK_LIST else PAIN_LEVEL_WORK_LIST)
 
     // Answers
-    val secondAnswer = ObservableField<String>(PAIN_PRESENTED_HOW_LIST.first())
-    val thirdAnswer = ObservableField<String>(PAIN_WHEN_LIST.first())
-    val forthAnswer = ObservableField<String>(PAIN_AGO_LIST.first())
-    val fifthAnswer = ObservableField<String>(PAIN_DURATION_LIST.first())
+    val secondAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_PRESENTED_HOW_LIST.first() else PAIN_PRESENTED_HOW_LIST.first())
+    val thirdAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_WHEN_LIST.first() else PAIN_WHEN_LIST.first())
+    val forthAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_AGO_LIST.first() else PAIN_AGO_LIST.first())
+    val fifthAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_DURATION_LIST.first() else PAIN_DURATION_LIST.first())
     val sixAnswer = ObservableField<String>(PAIN_INTENSITY_LIST.map { it.toString() }.first())
-    val sevenAnswer = ObservableField<String>(PAIN_LEVEL_LIST.first())
-    val eightAnswer = ObservableField<String>(PAIN_LEVEL_WORK_LIST.first())
+    val sevenAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_LEVEL_LIST.first() else PAIN_LEVEL_LIST.first())
+    val eightAnswer = ObservableField<String>(if (Locale.getDefault().language == "en") EnglishConstants.PAIN_LEVEL_WORK_LIST.first() else PAIN_LEVEL_WORK_LIST.first())
 
     // First Answer Observables
     val firstButton = ObservableBoolean(false)

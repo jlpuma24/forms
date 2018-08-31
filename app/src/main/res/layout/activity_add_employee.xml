@@ -22,11 +22,11 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4989d8"
+        android:background="@android:color/white"
         app:tabIndicatorColor="#4989d8"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@android:color/white"
-        app:tabTextColor="@android:color/white" />
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextColor="@android:color/black" />
 
     <View
         android:layout_width="match_parent"
