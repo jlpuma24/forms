@@ -16,12 +16,19 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 
 class EmployeeMainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_main)
+
+        if (Locale.getDefault().language == "en") {
+            employeeAdd.setImageResource(R.drawable.add_employee_en)
+            employeeEdit.setImageResource(R.drawable.edit_employee_en)
+        }
+
         employeeAdd.setOnClickListener {
             startActivity(Intent(applicationContext, AddEmployeeActivity::class.java))
             finish()
