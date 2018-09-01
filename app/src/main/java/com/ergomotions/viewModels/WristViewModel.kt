@@ -10,7 +10,7 @@ class WristViewModel @Inject constructor(
 
     init {
         headerBanner.set(resourceProvider.getDrawable(R.drawable.ic_wrist_banner))
-        firstQuestion.set(resourceProvider.getString(R.string.common_question_a, "la munẽca"))
+        firstQuestion.set(resourceProvider.getString(R.string.common_question_a, resourceProvider.getString(R.string.ten)))
     }
 
     override fun provideData(): GeneralFormData {

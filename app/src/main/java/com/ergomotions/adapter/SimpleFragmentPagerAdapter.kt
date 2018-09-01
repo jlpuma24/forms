@@ -5,10 +5,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import com.ergomotions.R
-import com.ergomotions.fragments.EmployeeInfoFragment
-import com.ergomotions.fragments.GeneralFragment
-import com.ergomotions.fragments.YourHabitsFragment
-import com.ergomotions.fragments.YourWorkFragment
+import com.ergomotions.fragments.*
 import com.ergomotions.util.Constants.ITEMS
 
 class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
@@ -18,7 +15,7 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             0 -> EmployeeInfoFragment()
             1 -> YourWorkFragment()
             2 -> YourHabitsFragment()
-            3 -> EmployeeInfoFragment()
+            3 -> HealthStateFragment()
             4 -> GeneralFragment.newInstance(GeneralFragment.CERVIX)
             5 -> GeneralFragment.newInstance(GeneralFragment.SHOULDER)
             6  -> GeneralFragment.newInstance(GeneralFragment.ARM)

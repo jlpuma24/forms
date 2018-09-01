@@ -5,6 +5,7 @@
     <string name="login">INGRESAR</string>
     <string name="register">REGISTRARSE</string>
     <string name="create_company">Crear empresa</string>
+    <string name="help">Ayuda</string>
     <string name="success_company_add">Empresa almacenada exitosamente.</string>
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
     <string name="error_login">Existió un error al momento de realizar la petición, intente nuevamente.</string>
@@ -35,6 +36,8 @@
     <string name="fourteen">Espalda baja</string>
     <string name="fifteen">Cadera</string>
     <string name="companies_list">Lista de empresas</string>
+    <string name="employees_list">Lista de empleados</string>
+    <string name="no_employees">Esta empresa aún no tiene empleados registrados</string>
 
     <string name="names">* Nombres</string>
     <string name="lastnames">* Apellidos</string>
@@ -69,22 +72,27 @@
 
     <string name="yes">Si</string>
     <string name="no">No</string>
+    
+    <string name="pain_first_question">* ¿Durante los últimos 7 días ha presentado dolor, molestias o inconfort en alguna parte del cuerpo?</string>
+    <string name="pain_second_question">* ¿Durante los últimos 7 días usted ha presentado alguna enfermedad?</string>
+    <string name="which_one">* ¿Cúal?</string>
+    <string name="observations">* Observaciones</string>
 
     <!--Common fragment-->
 
-    <string name="common.title" tools:ignore="ExtraTranslation">Nuca</string>
-    <string name="common.first" tools:ignore="ExtraTranslation">\u2022 De acuerdo a las partes del cuerpo que identifica en cada gráfico, seleccione los lugares donde usted presenta molestias:</string>
-    <string name="common.left_side" tools:ignore="ExtraTranslation">Lado izquierdo</string>
-    <string name="common.right_side" tools:ignore="ExtraTranslation">Lado derecho</string>
-    <string name="common.both" tools:ignore="ExtraTranslation">Ambos</string>
-    <string name="common.question_a" tools:ignore="ExtraTranslation">1. Tengo molestias en %1$s</string>
-    <string name="common.question_b" tools:ignore="ExtraTranslation">2. Generalmente se presentan como:</string>
-    <string name="common.question_c" tools:ignore="ExtraTranslation">3. Los síntomas se presentan cuando:</string>
-    <string name="common.question_d" tools:ignore="ExtraTranslation">4. Los tengo desde hace:</string>
-    <string name="common.question_e" tools:ignore="ExtraTranslation">5. Permanecen por:</string>
-    <string name="common.question_f" tools:ignore="ExtraTranslation">6. Si presenta DOLOR seleccione a continuación la INTENSIDAD del mismo:</string>
-    <string name="common.question_g" tools:ignore="ExtraTranslation">7. Si usted experimentó molestias, dolor ¿Qué tan incómodo era esto?</string>
-    <string name="common.question_h" tools:ignore="ExtraTranslation">8. Si usted experimentó dolor, ¿Cuánto  interfirió con su habilidad para trabajar?</string>
+    <string name="common.title">Nuca</string>
+    <string name="common.first">\u2022 De acuerdo a las partes del cuerpo que identifica en cada gráfico, seleccione los lugares donde usted presenta molestias:</string>
+    <string name="common.left_side">Lado izquierdo</string>
+    <string name="common.right_side">Lado derecho</string>
+    <string name="common.both">Ambos</string>
+    <string name="common.question_a">1. Tengo molestias en %1$s</string>
+    <string name="common.question_b">2. Generalmente se presentan como:</string>
+    <string name="common.question_c">3. Los síntomas se presentan cuando:</string>
+    <string name="common.question_d">4. Los tengo desde hace:</string>
+    <string name="common.question_e">5. Permanecen por:</string>
+    <string name="common.question_f">6. Si presenta DOLOR seleccione a continuación la INTENSIDAD del mismo:</string>
+    <string name="common.question_g">7. Si usted experimentó molestias, dolor ¿Qué tan incómodo era esto?</string>
+    <string name="common.question_h">8. Si usted experimentó dolor, ¿Cuánto  interfirió con su habilidad para trabajar?</string>
 
 </resources>
 

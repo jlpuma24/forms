@@ -10,11 +10,14 @@ object Constants {
     private const val FEMALE = "Femenino"
     private const val YES = "Si"
     private const val NO = "No"
+
     private const val RIGHT = "Derecho"
     private const val LEFT = "Izquierdo"
     private const val BOTH = "Ambos"
+
     private const val LEFT_SIDE = "Lado izquierdo"
     private const val RIGHT_SIDE = "Lado derecho"
+
     private const val DO_MY_JOB = "Al realizar mi trabajo"
     private const val AT_END_OF_DAY =  "Al final del dia"
     private const val AT_MY_PLACE = "En mi casa"
@@ -65,7 +68,6 @@ object Constants {
     private const val NINE_RANGE = "12H"
     private const val TEN_RANGE = "Otro"
 
-
     val HAND_LIST : ArrayList<String> = arrayListOf(RIGHT, LEFT, BOTH)
     val GENDER_LIST: ArrayList<String> = arrayListOf(MALE, FEMALE)
     val YES_NO_LIST: ArrayList<String> = arrayListOf(YES, NO)
@@ -88,5 +90,5 @@ object Constants {
         return result
     }
 
-
+    fun getEmployeesList() = PrefsUtil.getInstance().userData.companies.firstOrNull { it.id == PrefsUtil.getInstance().companyId }?.employees
 }

@@ -44,6 +44,7 @@
             android:src="@drawable/tasks" />
 
         <ImageView
+            android:id="@+id/helpButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"

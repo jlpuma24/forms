@@ -10,7 +10,7 @@ class LowBagViewModel @Inject constructor(
 
     init {
         headerBanner.set(resourceProvider.getDrawable(R.drawable.ic_low_bag_banner))
-        firstQuestion.set(resourceProvider.getString(R.string.common_question_a, "la espalda baja"))
+        firstQuestion.set(resourceProvider.getString(R.string.common_question_a, resourceProvider.getString(R.string.fourteen)))
     }
 
     override fun provideData(): GeneralFormData {

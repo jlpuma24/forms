@@ -2,6 +2,7 @@ package com.ergomotions.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Pair;
 
 import com.ergomotions.network.LoginResponse;
 import com.google.gson.Gson;
@@ -9,6 +10,8 @@ import com.google.gson.Gson;
 public class PrefsUtil {
 
     private static final String USER_DATA = "com.ergomotions.USER_DATA";
+    private static final String USER_PASSWORD = "com.ergomotions.USER_PASSWORD";
+    private static final String USER_USERNAME = "com.ergomotions.USER_USERNAME";
     private static final String COMPANY_ID = "com.ergomotions.COMPANY_ID";
     private static final String PREF_NAME = "com.ergomotions.ERGOMOTIONS_PREFERENCES";
     private static PrefsUtil sInstance;
@@ -34,6 +37,15 @@ public class PrefsUtil {
 
     public void setUserData(LoginResponse loginResponse) {
         getEditor().putString(USER_DATA, new Gson().toJson(loginResponse)).commit();
+    }
+
+    public void setUserCredentials(String username, String password) {
+        getEditor().putString(USER_USERNAME, username).commit();
+        getEditor().putString(USER_PASSWORD, password).commit();
+    }
+
+    public Pair<String, String> getUserCredentials() {
+        return new Pair<>(getPrefs().getString(USER_USERNAME, ""), getPrefs().getString(USER_PASSWORD, ""));
     }
 
     public void setCompanyId(int id) {

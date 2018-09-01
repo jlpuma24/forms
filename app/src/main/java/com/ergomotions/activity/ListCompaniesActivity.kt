@@ -15,7 +15,7 @@ class ListCompaniesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_companies)
         companiesList.layoutManager = LinearLayoutManager(this)
-        companiesList.adapter = SingleListAdapter(this)
+        companiesList.adapter = SingleListAdapter(this, false)
     }
 
     override fun onBackPressed() {

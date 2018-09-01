@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.os.Handler
 import com.ergomotions.R
 import com.ergomotions.util.Constants
-
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

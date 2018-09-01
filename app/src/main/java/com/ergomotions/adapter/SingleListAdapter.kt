@@ -11,11 +11,13 @@ import com.ergomotions.R
 import com.ergomotions.util.PrefsUtil
 import android.view.LayoutInflater
 import com.ergomotions.activity.EmployeeMainActivity
+import com.ergomotions.util.Constants
 
 
-class SingleListAdapter (var mContext: Context) : RecyclerView.Adapter<SingleListAdapter.CompaniesViewHolder>() {
+class SingleListAdapter (private var mContext: Context, private var isEmployeesList: Boolean) : RecyclerView.Adapter<SingleListAdapter.CompaniesViewHolder>() {
 
     var companies = PrefsUtil.getInstance().userData.companies
+    var employees = Constants.getEmployeesList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CompaniesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -27,11 +29,17 @@ class SingleListAdapter (var mContext: Context) : RecyclerView.Adapter<SingleLis
 
     override fun onBindViewHolder(holder: CompaniesViewHolder?, position: Int) {
         holder?.itemView?.setOnClickListener {
-            PrefsUtil.getInstance().companyId = companies[position].id
-            mContext.startActivity(Intent(mContext, EmployeeMainActivity::class.java))
-            (mContext as Activity).finish()
+            if (!isEmployeesList) {
+                PrefsUtil.getInstance().companyId = companies[position].id
+                mContext.startActivity(Intent(mContext, EmployeeMainActivity::class.java))
+                (mContext as Activity).finish()
+            }
         }
-        holder?.display(companies[position].name)
+        if (!isEmployeesList) {
+            holder?.display(companies[position].name)
+        } else {
+            holder?.display(employees!![position].name + " " + employees!![position].lastname)
+        }
     }
 
     inner class CompaniesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
