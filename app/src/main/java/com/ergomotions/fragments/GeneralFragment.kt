@@ -27,6 +27,10 @@ class GeneralFragment : Fragment() {
         const val LOW_BAG = "LOW_BAG"
         const val HIGH_BAG = "HIGH_BAG"
         const val HIP = "HIP"
+        const val TIGHT = "TIGHT"
+        const val KNEE = "KNEE"
+        const val LEG = "LEG"
+        const val FOOT = "FOOT"
 
         private const val TYPE = "TYPE"
 

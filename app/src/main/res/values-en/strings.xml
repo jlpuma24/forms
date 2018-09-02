@@ -35,6 +35,10 @@
     <string name="thirteen">Upper back</string>
     <string name="fourteen">Lower back</string>
     <string name="fifteen">Hip</string>
+    <string name="sixteen">Thigh</string>
+    <string name="seventeen">Knee</string>
+    <string name="eighteen">Leg</string>
+    <string name="nineteen">Foot</string>
     <string name="companies_list">Companies list</string>
     <string name="employees_list">Employees list</string>
     <string name="no_employees">Esta empresa aún no tiene empleados registrados</string>
