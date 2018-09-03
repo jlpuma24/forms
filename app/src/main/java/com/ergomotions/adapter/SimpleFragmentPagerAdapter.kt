@@ -30,7 +30,9 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             15 -> GeneralFragment.newInstance(GeneralFragment.TIGHT)
             16 -> GeneralFragment.newInstance(GeneralFragment.KNEE)
             17 -> GeneralFragment.newInstance(GeneralFragment.LEG)
-            else -> GeneralFragment.newInstance(GeneralFragment.FOOT)
+            18 -> GeneralFragment.newInstance(GeneralFragment.FOOT)
+            19 -> TakePhotosFragment()
+            else -> CompanyReportFragment()
         }
     }
 
@@ -56,7 +58,9 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             15 -> mContext.getString(R.string.sixteen)
             16 -> mContext.getString(R.string.seventeen)
             17 -> mContext.getString(R.string.eighteen)
-            else -> mContext.getString(R.string.nineteen)
+            18 -> mContext.getString(R.string.nineteen)
+            19 -> mContext.getString(R.string.photos)
+            else -> mContext.getString(R.string.company_report)
         }
     }
 }

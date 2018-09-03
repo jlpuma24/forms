@@ -81,6 +81,30 @@
     <string name="pain_second_question">* In the last 7 days, have you had any illnesses? </string>
     <string name="which_one">* Which one?</string>
     <string name="observations">* Observations</string>
+    <string name="photos">Photos</string>
+    <string name="photos_copy">Please take and upload \n3 photos of the job post</string>
+    <string name="take_photos">Take photos</string>
+    <string name="company_report">Company report</string>
+    
+    <string name="company">Company</string>
+    <string name="contact_responsable">Contact responsible</string>
+    <string name="cut_date">Cut Date</string>
+    <string name="professional_analyst">Professional analyst</string>
+    <string name="town">Town</string>
+    
+    <string name="section_one">Section I</string>
+    <string name="company_characterization">COMPANY CHARACTERIZATION</string>
+    <string name="general_data_company">General data company</string>
+    <string name="workers_data">Workers data</string>
+    <string name="indicators_data">Indicators data</string>
+    <string name="samples_and_areas_selected">Samples and areas selected</string>
+
+    <string name="section_two">Section II: SIN DME</string>
+    <string name="table_of_evaluated_workers">Table of evaluated workers</string>
+    <string name="jobs_areas">Job areas</string>
+    <string name="comments_and_qualify">Comments and qualify of workers by process</string>
+    <string name="recommendations">Recommendations</string>
+
 
     <!--Common fragment-->
 
