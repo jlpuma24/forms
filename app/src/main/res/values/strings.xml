@@ -81,6 +81,31 @@
     <string name="pain_second_question">* ¿Durante los últimos 7 días usted ha presentado alguna enfermedad?</string>
     <string name="which_one">* ¿Cúal?</string>
     <string name="observations">* Observaciones</string>
+    <string name="photos">Fotos</string>
+    <string name="photos_copy">Por favor tome y cargue\n3 fotos del puesto de trabajo</string>
+    <string name="take_photos">Tomar fotos</string>
+    <string name="company_report">Reporte empresa</string>
+
+    <string name="company">Empresa</string>
+    <string name="contact_responsable">Responsable de contacto</string>
+    <string name="cut_date">Fecha de corte</string>
+    <string name="professional_analyst">Profesional Analista</string>
+    <string name="town">Municipio</string>
+
+    <string name="section_one">Sección I</string>
+    <string name="company_characterization">CARACTERIZACIÓN DE LA EMPRESA</string>
+    <string name="general_data_company">Los datos generales de la empresa</string>
+    <string name="workers_data">Los datos de los trabajadores</string>
+    <string name="indicators_data">Los datos de indicadores</string>
+    <string name="samples_and_areas_selected">Muestra y áreas seleccionadas</string>
+
+    <string name="section_two">Section II: SIN DME</string>
+    <string name="table_of_evaluated_workers">Tabla de trabajadores evaluados</string>
+    <string name="jobs_areas">Áreas de trabajo</string>
+    <string name="comments_and_qualify">Comentarios y clasificación de los trabajadores por proceso</string>
+    <string name="recommendations">Recomendaciones</string>
+    <string name="main_menu">Menú principal</string>
+    <string name="exit">Salir</string>
 
     <!--Common fragment-->
 

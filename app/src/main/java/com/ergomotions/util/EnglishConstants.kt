@@ -54,10 +54,25 @@ object EnglishConstants {
     private const val NINE_RANGE = "12H"
     private const val TEN_RANGE = "Other"
 
+    private const val WALK = "Walking"
+    private const val JOGGING = "Jogging"
+    private const val RUNNING = "Running"
+    private const val GYM = "Gymnasium"
+    private const val BICYCLE = "Bicycle"
+    private const val SOCCER = "Football"
+    private const val BASKETBALL = "Basketball"
+    private const val VOLEYBALL = "Volleyball"
+    private const val SWIMMING = "Swimming"
+    private const val TENNIS_COURT = "Tennis court"
+    private const val CYCLOVIA  = "Cyclovia"
+    private const val SKATING = "Skating"
+    private const val OTHER = "Other"
+
     val HAND_LIST: ArrayList<String> = arrayListOf(RIGHT, LEFT, BOTH)
     val GENDER_LIST: ArrayList<String> = arrayListOf(MALE, FEMALE)
     val YES_NO_LIST: ArrayList<String> = arrayListOf(YES, NO)
     val PAIN_SIDE_LIST: ArrayList<String> = arrayListOf(RIGHT_SIDE, LEFT_SIDE, BOTH)
+    val ACTIVITIES : ArrayList<String> = arrayListOf(WALK, JOGGING, RUNNING, GYM, BICYCLE, SOCCER, BASKETBALL, VOLEYBALL, SWIMMING, TENNIS_COURT, CYCLOVIA, SKATING, OTHER)
     val PAIN_WHEN_LIST: ArrayList<String> = arrayListOf(DO_MY_JOB, AT_END_OF_DAY, AT_MY_PLACE, AT_END_OF_WEEK, ALL_TIME)
     val PAIN_PRESENTED_HOW_LIST: ArrayList<String> = arrayListOf(PAIN, TINGLE, DISCOMFORT, NUMBNESS)
     val PAIN_AGO_LIST: ArrayList<String> = arrayListOf(ONE_WEEK, ONE_MONTH, THREE_MONTHS, SIX_MONTHS, TWELVE_MONTS, MORE_THAN_TWELVE_MONTHS)

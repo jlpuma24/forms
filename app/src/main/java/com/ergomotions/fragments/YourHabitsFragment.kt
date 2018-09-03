@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.ergomotions.R
 import com.ergomotions.util.Constants
+import com.ergomotions.util.EnglishConstants
+import java.util.*
 
 class YourHabitsFragment: Fragment() {
 
@@ -20,10 +22,12 @@ class YourHabitsFragment: Fragment() {
         view?.findViewById<Spinner>(R.id.spinner_how_many_cigarretes)?.adapter = ArrayAdapter<String>(context,
                 android.R.layout.simple_spinner_item, Constants.getHowManyCigarretesList())
         view?.findViewById<Spinner>(R.id.spinner_how_much_cigarretes)?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, Constants.PAIN_AGO_LIST)
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.PAIN_AGO_LIST else EnglishConstants.PAIN_AGO_LIST)
         view?.findViewById<Spinner>(R.id.spinner_excercise_frequency)?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, Constants.DURATION_LIST)
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.DURATION_LIST else EnglishConstants.DURATION_LIST)
         view?.findViewById<Spinner>(R.id.spinner_duration)?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, Constants.FREQUENCY_LIST)
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.FREQUENCY_LIST else EnglishConstants.FREQUENCY_LIST)
+        view?.findViewById<Spinner>(R.id.spinnerActivityName)?.adapter = ArrayAdapter<String>(context,
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.ACTIVITIES else EnglishConstants.ACTIVITIES)
     }
 }
