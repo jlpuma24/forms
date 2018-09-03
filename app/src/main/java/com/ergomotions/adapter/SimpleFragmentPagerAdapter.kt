@@ -26,14 +26,18 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             11 -> GeneralFragment.newInstance(GeneralFragment.FINGER)
             12 -> GeneralFragment.newInstance(GeneralFragment.HIGH_BAG)
             13 -> GeneralFragment.newInstance(GeneralFragment.LOW_BAG)
-            else -> GeneralFragment.newInstance(GeneralFragment.HIP)
+            14 -> GeneralFragment.newInstance(GeneralFragment.HIP)
+            15 -> GeneralFragment.newInstance(GeneralFragment.TIGHT)
+            16 -> GeneralFragment.newInstance(GeneralFragment.KNEE)
+            17 -> GeneralFragment.newInstance(GeneralFragment.LEG)
+            else -> GeneralFragment.newInstance(GeneralFragment.FOOT)
         }
     }
 
     override fun getCount() = ITEMS
 
-    override fun getPageTitle(position: Int) =
-        when (position) {
+    override fun getPageTitle(position: Int): String {
+        return when (position) {
             0 -> mContext.getString(R.string.one)
             1 -> mContext.getString(R.string.two)
             2 -> mContext.getString(R.string.three)
@@ -48,6 +52,11 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             11 -> mContext.getString(R.string.twelve)
             12 -> mContext.getString(R.string.thirteen)
             13 -> mContext.getString(R.string.fourteen)
-            else -> mContext.getString(R.string.fifteen)
+            14 -> mContext.getString(R.string.fifteen)
+            15 -> mContext.getString(R.string.sixteen)
+            16 -> mContext.getString(R.string.seventeen)
+            17 -> mContext.getString(R.string.eighteen)
+            else -> mContext.getString(R.string.nineteen)
+        }
     }
 }

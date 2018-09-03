@@ -6,13 +6,17 @@ import com.ergomotions.viewModels.ArmViewModel
 import com.ergomotions.viewModels.CervixViewModel
 import com.ergomotions.viewModels.ElbowViewModel
 import com.ergomotions.viewModels.FingerViewModel
+import com.ergomotions.viewModels.FootViewModel
 import com.ergomotions.viewModels.ForeArmViewModel
 import com.ergomotions.viewModels.GeneralViewModel
 import com.ergomotions.viewModels.HandViewModel
 import com.ergomotions.viewModels.HighBagViewModel
 import com.ergomotions.viewModels.HipViewModel
+import com.ergomotions.viewModels.KneeViewModel
+import com.ergomotions.viewModels.LegViewModel
 import com.ergomotions.viewModels.LowBagViewModel
 import com.ergomotions.viewModels.ShoulderViewModel
+import com.ergomotions.viewModels.ThighViewModel
 import com.ergomotions.viewModels.WristViewModel
 import dagger.Binds
 import dagger.Module
@@ -87,4 +91,28 @@ abstract class ViewModelModule {
     @ActivityScope
     @StringKey(GeneralFragment.HIP)
     abstract fun bindHipViewModel(cervixViewModel: HipViewModel): GeneralViewModel
+
+    @Binds
+    @IntoMap
+    @ActivityScope
+    @StringKey(GeneralFragment.TIGHT)
+    abstract fun bindThighViewModel(cervixViewModel: ThighViewModel): GeneralViewModel
+
+    @Binds
+    @IntoMap
+    @ActivityScope
+    @StringKey(GeneralFragment.KNEE)
+    abstract fun bindKneeViewModel(cervixViewModel: KneeViewModel): GeneralViewModel
+
+    @Binds
+    @IntoMap
+    @ActivityScope
+    @StringKey(GeneralFragment.LEG)
+    abstract fun bindLegViewModel(cervixViewModel: LegViewModel): GeneralViewModel
+
+    @Binds
+    @IntoMap
+    @ActivityScope
+    @StringKey(GeneralFragment.FOOT)
+    abstract fun bindFootViewModel(cervixViewModel: FootViewModel): GeneralViewModel
 }
