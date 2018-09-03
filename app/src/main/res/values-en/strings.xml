@@ -105,6 +105,8 @@
     <string name="comments_and_qualify">Comments and qualify of workers by process</string>
     <string name="recommendations">Recommendations</string>
 
+    <string name="main_menu">Main menu</string>
+    <string name="exit">Exit</string>
 
     <!--Common fragment-->
 
