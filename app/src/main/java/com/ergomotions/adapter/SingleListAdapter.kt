@@ -25,7 +25,7 @@ class SingleListAdapter (private var mContext: Context, private var isEmployeesL
         return CompaniesViewHolder(view)
     }
 
-    override fun getItemCount() = companies.size
+    override fun getItemCount(): Int = if (!isEmployeesList) companies.size else employees?.size!!
 
     override fun onBindViewHolder(holder: CompaniesViewHolder?, position: Int) {
         holder?.itemView?.setOnClickListener {

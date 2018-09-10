@@ -222,7 +222,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/input"
                 android:gravity="center"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
             <EditText
@@ -235,7 +235,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/input"
                 android:gravity="center"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
             <EditText
@@ -248,7 +248,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/input"
                 android:gravity="center"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
         </LinearLayout>
