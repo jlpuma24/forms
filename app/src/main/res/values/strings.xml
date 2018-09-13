@@ -107,6 +107,12 @@
     <string name="main_menu">Menú principal</string>
     <string name="exit">Salir</string>
 
+    <string name="update">Actualizar</string>
+    <string name="edit_employee">Editar empleado</string>
+    <string name="success_update">Empleado actualizado exitosamente</string>
+    <string name="cancel">Cancelar</string>
+    <string name="accept">Aceptar</string>
+
     <!--Common fragment-->
 
     <string name="common.title">Nuca</string>

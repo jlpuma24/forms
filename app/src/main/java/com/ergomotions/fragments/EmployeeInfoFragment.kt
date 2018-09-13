@@ -31,7 +31,8 @@ class EmployeeInfoFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (!s.toString().isEmpty()) {
                     if (!editTextHeight?.text.toString().isEmpty()) {
-                        val imc = s.toString().toDouble() / Math.pow(editTextHeight?.text.toString().toDouble(), 2.0)
+                        val heightInMts = editTextHeight?.text.toString().toDouble() / 100
+                        val imc = s.toString().toDouble() / Math.pow(heightInMts, 2.0)
                         editTextImc?.setText("%.2f".format(imc))
                     }
                 }
@@ -49,7 +50,8 @@ class EmployeeInfoFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (!s.toString().isEmpty()) {
                     if (!editTextWeight?.text.toString().isEmpty()) {
-                        val imc = editTextWeight?.text.toString().toDouble() / Math.pow(s.toString().toDouble(), 2.0)
+                        val heightInMts = s.toString().toDouble() / 100
+                        val imc = (editTextWeight?.text.toString().toDouble()) / Math.pow(heightInMts, 2.0)
                         editTextImc?.setText("%.2f".format(imc))
                     }
                 }

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.ergomotions.R
 import com.ergomotions.util.PrefsUtil
 import android.view.LayoutInflater
+import com.ergomotions.activity.EditEmployeeActivity
 import com.ergomotions.activity.EmployeeMainActivity
 import com.ergomotions.util.Constants
 
@@ -33,6 +34,13 @@ class SingleListAdapter (private var mContext: Context, private var isEmployeesL
                 PrefsUtil.getInstance().companyId = companies[position].id
                 mContext.startActivity(Intent(mContext, EmployeeMainActivity::class.java))
                 (mContext as Activity).finish()
+            } else {
+                val intent = Intent(mContext, EditEmployeeActivity::class.java)
+                intent.putExtra("employeeName", employees!![position].name)
+                intent.putExtra("employeeLastname", employees!![position].lastname)
+                intent.putExtra("employeeIdentification", employees!![position].identification)
+                intent.putExtra("employeeId", employees!![position].id)
+                mContext.startActivity(intent)
             }
         }
         if (!isEmployeesList) {
