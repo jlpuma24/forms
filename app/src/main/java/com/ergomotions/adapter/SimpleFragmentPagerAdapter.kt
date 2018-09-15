@@ -10,12 +10,17 @@ import com.ergomotions.util.Constants.ITEMS
 
 class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
+    val employeeFragment = EmployeeInfoFragment()
+    val workFragment = YourWorkFragment()
+    val habitsFragment = YourHabitsFragment()
+    val healthFragment = HealthStateFragment()
+
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> EmployeeInfoFragment()
-            1 -> YourWorkFragment()
-            2 -> YourHabitsFragment()
-            3 -> HealthStateFragment()
+            0 -> employeeFragment
+            1 -> workFragment
+            2 -> habitsFragment
+            3 -> healthFragment
             4 -> GeneralFragment.newInstance(GeneralFragment.CERVIX)
             5 -> GeneralFragment.newInstance(GeneralFragment.SHOULDER)
             6  -> GeneralFragment.newInstance(GeneralFragment.ARM)
