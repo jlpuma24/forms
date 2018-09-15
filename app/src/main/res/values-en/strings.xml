@@ -46,7 +46,7 @@
     <string name="names">* Names</string>
     <string name="lastnames">* Lastnames</string>
     <string name="id">* ID</string>
-    <string name="sex">* Seo</string>
+    <string name="sex">* Gender</string>
     <string name="weight">* Weight (kg)</string>
     <string name="height">* Height (cm)</string>
     <string name="imc">* IMC (kg/m2)</string>
@@ -107,6 +107,12 @@
 
     <string name="main_menu">Main menu</string>
     <string name="exit">Exit</string>
+
+    <string name="update">Update</string>
+    <string name="edit_employee">Edit employee</string>
+    <string name="success_update">Employee successfully updated.</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
 
     <!--Common fragment-->
 

@@ -26,6 +26,9 @@
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".activity.EditEmployeeActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.CompanyMainActivity"
             android:screenOrientation="portrait" />
         <activity

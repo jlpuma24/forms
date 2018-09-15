@@ -20,10 +20,6 @@ class YourWorkFragment: Fragment() {
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        view?.findViewById<Spinner>(R.id.spinner_how_many_cigarretes)?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, Constants.getHowManyCigarretesList())
-        view?.findViewById<Spinner>(R.id.spinner_how_much_cigarretes)?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.PAIN_AGO_LIST else EnglishConstants.PAIN_AGO_LIST)
         view?.findViewById<Spinner>(R.id.spinner_job_journey)?.adapter = ArrayAdapter<String>(context,
                         android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en") Constants.JOB_JOURNEY_LIST else EnglishConstants.JOB_JOURNEY_LIST)
         view?.findViewById<Spinner>(R.id.spinner_job_journey_duration)?.adapter = ArrayAdapter<String>(context,
