@@ -6,4 +6,4 @@ data class CompanyRequest (var name: String,
                            var department: String,
                            var date: String,
                            var id: Int,
-                           var employees: ArrayList<Employee>)
+                           var employees: ArrayList<EmployeeRequest>)

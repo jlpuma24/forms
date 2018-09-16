@@ -37,16 +37,23 @@ class SingleListAdapter (private var mContext: Context, private var isEmployeesL
             } else {
                 val intent = Intent(mContext, EditEmployeeActivity::class.java)
                 intent.putExtra("employeeName", employees!![position].name)
-                intent.putExtra("employeeLastname", employees!![position].lastname)
+                intent.putExtra("employeeLastname", employees!![position].lastName)
                 intent.putExtra("employeeIdentification", employees!![position].identification)
                 intent.putExtra("employeeId", employees!![position].id)
+                intent.putExtra("employeeWeight", employees!![position].weight)
+                intent.putExtra("employeeHeight", employees!![position].height)
+                intent.putExtra("employeeAge", employees!![position].age)
+                intent.putExtra("employeeDependency", employees!![position].dependency)
+                intent.putExtra("employeeYears", employees!![position].yearsCompany)
+                intent.putExtra("employeeMonths", employees!![position].monthsCompany)
+                intent.putExtra("employeeGender", employees!![position].gender)
                 mContext.startActivity(intent)
             }
         }
         if (!isEmployeesList) {
             holder?.display(companies[position].name)
         } else {
-            holder?.display(employees!![position].name + " " + employees!![position].lastname)
+            holder?.display(employees!![position].name + " " + employees!![position].lastName)
         }
     }
 

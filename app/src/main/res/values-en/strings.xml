@@ -7,7 +7,9 @@
     <string name="create_company">Create company</string>
     <string name="help">Help</string>
     <string name="success_company_add">Company added successfully.</string>
+    <string name="success_employee_add">Employee added successfully.</string>
     <string name="error_company_add">There is an error at moment of store the company.</string>
+    <string name="error_employee_add">There is an error at moment of store the employee.</string>
     <string name="error_login">There is an error on the request, please try again.</string>
     <string name="new_company">New Company</string>
     <string name="worker">Employee</string>
@@ -113,6 +115,8 @@
     <string name="success_update">Employee successfully updated.</string>
     <string name="cancel">Cancel</string>
     <string name="accept">Accept</string>
+
+    <string name="info_post">The information is ready to be sent to the server according to the answers, do you want to continue?</string>
 
     <!--Common fragment-->
 

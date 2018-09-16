@@ -3,6 +3,7 @@ package com.ergomotions.network
 import com.google.gson.annotations.SerializedName
 
 data class EmployeeRequest(
+        @SerializedName("id") val id: Int,
         @SerializedName("name") val name: String,
         @SerializedName("lastname") val lastName: String,
         @SerializedName("identification") val identification: String,

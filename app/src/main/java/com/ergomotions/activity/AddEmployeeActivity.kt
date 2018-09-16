@@ -66,11 +66,22 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val employee = processEmployeeResponse()
-        val bodyParts = processBodyParts()
-        if (employee != null) {
-            requestService(EmployeeRequestWrapper(employee, bodyParts))
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(getString(R.string.info_post))
+        builder.setCancelable(false)
+        builder.setPositiveButton(getString(android.R.string.yes)) { dialog, _ ->
+            val employee = processEmployeeResponse()
+            val bodyParts = processBodyParts()
+            if (employee != null) {
+                requestService(EmployeeRequestWrapper(employee, bodyParts))
+            }
+            dialog.dismiss()
         }
+        builder.setNegativeButton(getString(android.R.string.no)) { dialog, _ ->
+            dialog.dismiss()
+        }
+        val alert = builder.create()
+        alert.show()
         return super.onOptionsItemSelected(item)
     }
 
@@ -108,24 +119,22 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
             override fun onResponse(call: Call<EmployeeResponse>, response: Response<EmployeeResponse>) {
                 dialog.dismiss()
                 if (response.isSuccessful && response.body() != null && response.body()!!.status == "OK") {
-                    // TODO Tito ajustar estos mensaje
-                    showResponseMessage(getString(R.string.success_company_add), false)
+                    showResponseMessage(getString(R.string.success_employee_add), false)
                 } else {
-                    // TODO Tito ajustar estos mensaje
-                    showResponseMessage(getString(R.string.error_company_add), true)
+                    showResponseMessage(getString(R.string.error_employee_add), true)
                 }
             }
 
             override fun onFailure(call: Call<EmployeeResponse>, t: Throwable) {
                 dialog.dismiss()
-                showResponseMessage(getString(R.string.error_company_add), true)
+                showResponseMessage(getString(R.string.error_employee_add), true)
             }
         })
     }
 
     private fun showResponseMessage(message: String, isError: Boolean) {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage(if (!isError) getString(R.string.success_company_add) else message)
+        builder.setMessage(if (!isError) getString(R.string.success_employee_add) else message)
         builder.setCancelable(false)
         builder.setPositiveButton(getString(android.R.string.yes)) { dialog, _ ->
             if (!isError) {
@@ -162,7 +171,7 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
         val secondInfo = workFragment.getInfo()
         val thirdInfo = habitsFragment.getInfo()
         val forthInfo = healthFragment.getInfo()
-        return EmployeeRequest(firstInfo.name, firstInfo.lastName, firstInfo.identification, firstInfo.weight,
+        return EmployeeRequest(-1, firstInfo.name, firstInfo.lastName, firstInfo.identification, firstInfo.weight,
                 firstInfo.height, firstInfo.gender, firstInfo.age, firstInfo.monthsCompany,
                 firstInfo.yearsCompany, firstInfo.dependency,
                 secondInfo.jobJourney, secondInfo.workHoursByDay, secondInfo.viabilityJobJourney,

@@ -7,7 +7,9 @@
     <string name="create_company">Crear empresa</string>
     <string name="help">Ayuda</string>
     <string name="success_company_add">Empresa almacenada exitosamente.</string>
+    <string name="success_employee_add">Empleado almacenado exitisamente.</string>
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
+    <string name="error_employee_add">Existió un error al momento de guardar el empleado.</string>
     <string name="error_login">Existió un error al momento de realizar la petición, intente nuevamente.</string>
     <string name="new_company">Nueva empresa</string>
     <string name="worker">Trabajador</string>
@@ -112,6 +114,8 @@
     <string name="success_update">Empleado actualizado exitosamente</string>
     <string name="cancel">Cancelar</string>
     <string name="accept">Aceptar</string>
+
+    <string name="info_post">La información está lista para ser enviada al servidor acorde a las respuestas, desea continuar?</string>
 
     <!--Common fragment-->
 
