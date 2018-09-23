@@ -7,22 +7,14 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.ToggleButton
 import com.ergomotions.R
-import com.ergomotions.util.getCheckedPositionOrThrowException
-import com.ergomotions.util.getStringOrThrowException
-import kotlinx.android.synthetic.main.employee_info_fragment.button_option_female
-import kotlinx.android.synthetic.main.employee_info_fragment.button_option_male
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextAge
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextArea
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextHeight
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextId
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextLastName
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextMonths
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextName
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextWeight
-import kotlinx.android.synthetic.main.employee_info_fragment.editTextYears
+import com.ergomotions.util.*
+import kotlinx.android.synthetic.main.employee_info_fragment.*
+import java.util.*
 
 class EmployeeInfoFragment : Fragment() {
 
@@ -34,6 +26,7 @@ class EmployeeInfoFragment : Fragment() {
         val editTextWeight = view?.findViewById<EditText>(R.id.editTextWeight)
         val editTextHeight = view?.findViewById<EditText>(R.id.editTextHeight)
         val editTextImc = view?.findViewById<EditText>(R.id.editTextImc)
+        val spinnerArea = view?.findViewById<Spinner>(R.id.editTextArea)
 
         editTextWeight?.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
@@ -74,6 +67,11 @@ class EmployeeInfoFragment : Fragment() {
             }
 
         })
+
+        spinnerArea?.adapter = ArrayAdapter<String>(context,
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+            Constants.AREAS else EnglishConstants.AREAS)
+
         return view
     }
 
@@ -100,11 +98,13 @@ class EmployeeInfoFragment : Fragment() {
                     editTextAge.getStringOrThrowException("Edad es obligatorio"), // TODO Fix the message base on language tito
                     editTextMonths.getStringOrThrowException("Meses en la compañia son obligatorio"), // TODO Fix the message base on language tito
                     editTextYears.getStringOrThrowException("Años en la compañia son obligatorio"), // TODO Fix the message base on language tito
-                    editTextArea.getStringOrThrowException("Área es obligatorio")) // TODO Fix the message base on language tito
+                    editTextArea.getSelectedValue().toString(), getDominance())
             info != null -> info!!
             else -> throw Throwable(message = "Por favor llenar todos los campos")
         }
     }
+
+    private fun getDominance() = "0".takeIf { button_option_right.isChecked } ?: "1".takeIf { button_option_left.isChecked } ?: "2".takeIf { button_option_both.isChecked } ?: ""
 
     private fun getButtonsPair(): Pair<ToggleButton, ToggleButton> {
         return (button_option_male to button_option_female)
@@ -120,6 +120,7 @@ class EmployeeInfoFragment : Fragment() {
             val age: String,
             val monthsCompany: String,
             val yearsCompany: String,
-            val dependency: String)
+            val dependency: String,
+            val dominance: String)
 
 }

@@ -47,6 +47,7 @@ class SingleListAdapter (private var mContext: Context, private var isEmployeesL
                 intent.putExtra("employeeYears", employees!![position].yearsCompany)
                 intent.putExtra("employeeMonths", employees!![position].monthsCompany)
                 intent.putExtra("employeeGender", employees!![position].gender)
+                intent.putExtra("employeeDominance", employees!![position].dominance)
                 mContext.startActivity(intent)
             }
         }

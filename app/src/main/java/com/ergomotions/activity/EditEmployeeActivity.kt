@@ -10,11 +10,14 @@ import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.ArrayAdapter
 import com.ergomotions.BuildConfig
 import com.ergomotions.network.ApiService
 import com.ergomotions.network.EmployeeRequest
 import com.ergomotions.network.EmployeeResponse
 import com.ergomotions.util.Constants
+import com.ergomotions.util.EnglishConstants
+import com.ergomotions.util.getSelectedValue
 import kotlinx.android.synthetic.main.fragment_worker_info.*
 import okhttp3.OkHttpClient
 import retrofit2.Call
@@ -22,6 +25,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 class EditEmployeeActivity : AppCompatActivity() {
@@ -43,8 +47,8 @@ class EditEmployeeActivity : AppCompatActivity() {
             val employee = EmployeeRequest(intent.getIntExtra("employeeId", -1), editTextName.text.toString(), editTextLastName.text.toString(),
                     editTextId.text.toString(), editTextWeight.text.toString(),
                     editTextHeight.text.toString(), 2, editTextHeight.text.toString(),
-                    editTextMonths.text.toString(), editTextYears.text.toString(), editTextArea.text.toString(),
-                    -1,"",-1,"", -1, -1,
+                    editTextMonths.text.toString(), editTextYears.text.toString(), editTextArea.getSelectedValue().toString(),
+                    getDominance(), -1, "", -1, "", -1, -1,
                     "", -1, "", -1, -1, -1, -1,
                     "", "", -1)
 
@@ -64,7 +68,7 @@ class EditEmployeeActivity : AppCompatActivity() {
                     if (response.isSuccessful && response.body() != null && response.body()!!.status == "OK") {
                         val builder = AlertDialog.Builder(this@EditEmployeeActivity)
                         builder.setMessage(getString(R.string.success_update))
-                        builder.setPositiveButton(getString(R.string.accept)) {_, _ ->
+                        builder.setPositiveButton(getString(R.string.accept)) { _, _ ->
                             val intent = Intent(applicationContext, EmployeeMainActivity::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
@@ -97,7 +101,27 @@ class EditEmployeeActivity : AppCompatActivity() {
         }
 
         editTextAge.setText(intent.getStringExtra("employeeAge"))
-        editTextArea.setText(intent.getStringExtra("employeeDependency"))
+
+        editTextArea.adapter = ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+            Constants.AREAS else EnglishConstants.AREAS)
+
+        val englishIndex = EnglishConstants.AREAS.indexOfFirst { it == intent.getStringExtra("employeeDependency") }
+        val spanishIndex = Constants.AREAS.indexOfFirst { it == intent.getStringExtra("employeeDependency") }
+
+        if (englishIndex != -1 && spanishIndex == -1) {
+            editTextArea.setSelection(englishIndex)
+        } else if (englishIndex == -1 && spanishIndex != -1) {
+            editTextArea.setSelection(spanishIndex)
+        }
+
+        val dominance = intent.getStringExtra("employeeDominance").toInt()
+
+        when (dominance) {
+            0 -> button_option_right.isChecked = true
+            1 -> button_option_left.isChecked = true
+            2 -> button_option_both.isChecked = true
+        }
 
         editTextYears.setText(intent.getStringExtra("employeeYears"))
         editTextMonths.setText(intent.getStringExtra("employeeMonths"))
@@ -145,4 +169,7 @@ class EditEmployeeActivity : AppCompatActivity() {
         editTextWeight.setText(intent.getStringExtra("employeeWeight"))
         editTextHeight.setText(intent.getStringExtra("employeeHeight"))
     }
+
+    private fun getDominance() = "0".takeIf { button_option_right.isChecked } ?: "1".takeIf { button_option_left.isChecked } ?: "2".takeIf { button_option_both.isChecked } ?: ""
+
 }

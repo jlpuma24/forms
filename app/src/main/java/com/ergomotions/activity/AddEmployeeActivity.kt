@@ -173,7 +173,7 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
         val forthInfo = healthFragment.getInfo()
         return EmployeeRequest(-1, firstInfo.name, firstInfo.lastName, firstInfo.identification, firstInfo.weight,
                 firstInfo.height, firstInfo.gender, firstInfo.age, firstInfo.monthsCompany,
-                firstInfo.yearsCompany, firstInfo.dependency,
+                firstInfo.yearsCompany, firstInfo.dependency, firstInfo.dominance,
                 secondInfo.jobJourney, secondInfo.workHoursByDay, secondInfo.viabilityJobJourney,
                 secondInfo.viabilityJobJourneyExplanation,
                 thirdInfo.smoke, thirdInfo.cigarretes, thirdInfo.howLongSmoke, thirdInfo.physicalActivity,

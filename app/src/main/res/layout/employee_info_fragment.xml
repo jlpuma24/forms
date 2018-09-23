@@ -12,9 +12,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -256,33 +256,22 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/right"
-                android:textColor="@android:color/black"
-                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user_name"
+                android:visibility="invisible" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
                 android:gravity="center"
-                android:text="@string/left"
-                android:textColor="@android:color/black"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/both"
+                android:text="@string/dominancy"
                 android:textColor="@android:color/black"
                 android:textStyle="bold" />
 
@@ -291,46 +280,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editTextRight"
+            <ToggleButton
+                android:id="@+id/button_option_right"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/input"
-                android:gravity="center"
-                android:inputType="number"
-                android:singleLine="true" />
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/right"
+                android:textOn="@string/right"
+                android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/editTextLeft"
+            <ToggleButton
+                android:id="@+id/button_option_left"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/input"
-                android:gravity="center"
-                android:inputType="number"
-                android:singleLine="true" />
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/left"
+                android:textOn="@string/left"
+                android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/editTextBoth"
+            <ToggleButton
+                android:id="@+id/button_option_both"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="5dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/input"
-                android:gravity="center"
-                android:inputType="number"
-                android:singleLine="true" />
+                android:background="@drawable/toggle_selector"
+                android:textAllCaps="false"
+                android:textColor="@drawable/text_color_selector"
+                android:textOff="@string/both"
+                android:textOn="@string/both"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -392,26 +385,33 @@
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/editTextArea"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="5dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/input"
-            android:gravity="center"
-            android:singleLine="true" />
+            android:layout_marginTop="8dp"
+            android:background="@drawable/widgets_background">
+
+            <Spinner
+                android:id="@+id/editTextArea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:spinnerMode="dialog" />
+
+        </FrameLayout>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/since"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:text="@string/since"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"

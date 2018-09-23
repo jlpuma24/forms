@@ -14,6 +14,7 @@ data class EmployeeRequest(
         @SerializedName("monthsCompany") val monthsCompany: String,
         @SerializedName("yearsCompany") val yearsCompany: String,
         @SerializedName("dependency") val dependency: String,
+        @SerializedName("dominance") val dominance: String,
         @SerializedName("jobJourney") val jobJourney: Int,
         @SerializedName("workHoursByDay") val workHoursByDay: String,
         @SerializedName("viabilityJobJourney") val viabilityJobJourney: Int,
