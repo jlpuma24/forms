@@ -11,6 +11,7 @@
     <string name="error_company_add">Existió un error al momento de guardar la empresa.</string>
     <string name="error_employee_add">Existió un error al momento de guardar el empleado.</string>
     <string name="error_login">Existió un error al momento de realizar la petición, intente nuevamente.</string>
+    <string name="error_report">Existió un error al momento de solicitar el reporte, el empleado no existe en base de datos.</string>
     <string name="new_company">Nueva empresa</string>
     <string name="worker">Trabajador</string>
     <string name="name">* Nombre</string>
@@ -118,6 +119,19 @@
 
     <string name="info_post">La información está lista para ser enviada al servidor acorde a las respuestas, desea continuar?</string>
 
+    <string name="reports">Reportes</string>
+    <string name="find_report">Buscar reporte</string>
+
+    <string name="score">Nota</string>
+    <string name="subdomain">Sub-Dominio</string>
+    <string name="d1">D1 Información personal</string>
+    <string name="d2">D2 Habits and lifestyle </string>
+    <string name="d3">D3 Characteristics of work</string>
+    <string name="d4">D4 Health condition</string>
+    <string name="cigarretes_consume">Consumo de tabaco</string>
+    <string name="cigarretes_consume_time">Tiempo de consumo de tabaco</string>
+    <string name="exercise_consume">Frecuencia de actividad física</string>
+    <string name="exercise_consume_time">Duración de actividad física</string>
     <!--Common fragment-->
 
     <string name="common.title">Nuca</string>

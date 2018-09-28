@@ -7,6 +7,7 @@ import retrofit2.http.POST
 const val ADD_COMPANY = "addCompany"
 const val ADD_EMPLOYEE = "addEmployee"
 const val EDIT_EMPLOYEE = "editEmployee"
+const val REPORT = "employeeReport"
 const val LOGIN = "login"
 
 interface ApiService {
@@ -19,6 +20,9 @@ interface ApiService {
 
     @POST(EDIT_EMPLOYEE)
     fun editEmployee(@Body company: EmployeeRequest): Call<EmployeeResponse>
+
+    @POST(REPORT)
+    fun getReport(@Body body: ReportRequest): Call<ReportResponse>
 
     @POST(LOGIN)
     fun login(@Body loginBody: LoginRequest): Call<LoginResponse>

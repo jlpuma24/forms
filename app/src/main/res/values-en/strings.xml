@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">SIN-DME</string>
     <string name="user">Username</string>
     <string name="password">Password</string>
@@ -118,6 +118,19 @@
     <string name="accept">Accept</string>
 
     <string name="info_post">The information is ready to be sent to the server according to the answers, do you want to continue?</string>
+    <string name="reports">Reports</string>
+    <string name="find_report">Buscar reporte</string>
+    <string name="error_report">There was an error when requesting the report, the employee does not exist in the database.</string>
+    <string name="score">Score</string>
+    <string name="subdomain">Sub-Domain</string>
+    <string name="d1">D1 personal information</string>
+    <string name="d2">D2 Hábitos y estilo de vida</string>
+    <string name="cigarretes_consume">Tobacco use</string>
+    <string name="cigarretes_consume_time">Tobacco use time</string>    
+    <string name="exercise_consume">Physical activity frequency</string>    
+    <string name="exercise_consume_time">Duration of physical activity</string>
+    <string name="d3">D3 Características del trabajo</string>
+    <string name="d4">D4 Estado de salud</string>
 
     <!--Common fragment-->
 

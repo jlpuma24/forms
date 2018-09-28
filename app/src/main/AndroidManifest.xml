@@ -25,6 +25,12 @@
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".activity.ReportDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReportsActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.EditEmployeeActivity"
             android:screenOrientation="portrait" />
         <activity

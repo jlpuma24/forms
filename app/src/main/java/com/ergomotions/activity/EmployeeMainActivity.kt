@@ -4,6 +4,8 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import com.ergomotions.R
 import com.ergomotions.network.ApiService
 import com.ergomotions.network.LoginRequest
@@ -24,6 +26,9 @@ class EmployeeMainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_employee_main)
 
+        toolbar.title = getString(R.string.worker)
+        setSupportActionBar(toolbar)
+
         if (Locale.getDefault().language == "en") {
             employeeAdd.setImageResource(R.drawable.add_employee_en)
             employeeEdit.setImageResource(R.drawable.edit_employee_en)
@@ -38,6 +43,17 @@ class EmployeeMainActivity: AppCompatActivity() {
             finish()
         }
         doLogin()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.reports, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        startActivity(Intent(this, ReportsActivity::class.java))
+        finish()
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onBackPressed() {

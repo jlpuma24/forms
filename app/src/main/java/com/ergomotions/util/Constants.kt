@@ -1,5 +1,7 @@
 package com.ergomotions.util
 
+import com.ergomotions.network.ReportResponse
+
 object Constants {
 
     const val SPLASH_DISPLAY_LENGTH = 1500L
@@ -103,10 +105,18 @@ object Constants {
     val FREQUENCY_LIST: ArrayList<String> = arrayListOf(FIFTEEN_MINUTES, THIRTY_MINUTES, ONE_HOUR, MORE_THAN_ONE_HOUR)
     val PAIN_LEVEL_WORK_LIST: ArrayList<String> = arrayListOf(NOTHING_AT_ALL, LITTLE_INTERFERENCE, SUBSTANTIAL_INTERFERENCE)
 
+    private lateinit var reportResponse: ReportResponse
+
     fun getHowManyCigarretesList() : ArrayList<String> {
         val result = ArrayList<String>()
         HOW_MANY_CIGARRETES_LIST.map { result.add(it.toString()) }
         return result
+    }
+
+    fun getReportResponse() = reportResponse
+
+    fun setReportResponse(reportResponseObject: ReportResponse) {
+        reportResponse = reportResponseObject
     }
 
     fun getEmployeesList() = PrefsUtil.getInstance().userData.companies.firstOrNull { it.id == PrefsUtil.getInstance().companyId }?.employees
