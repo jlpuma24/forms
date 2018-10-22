@@ -71,6 +71,20 @@ object EnglishConstants {
     private const val SUPERVISOR = "Supervisor"
     private const val ADMINISTRATOR = "Administrator"
 
+    private const val ONE_CIGARRETTES_OPTION = "1 to 5 cigarrettes"
+    private const val TWO_CIGARRETTES_OPTION = "6 to 15 cigarrettes"
+    private const val THREE_CIGARRETTES_OPTION = "16 and more cigarrettes"
+
+    private const val ONE_YEAR = "Less than a year"
+    private const val TWO_YEAR = "1 to 2 years"
+    private const val THREE_YEAR = "3 to 4 years"
+    private const val FOUR_YEAR = "5 to 9 years"
+    private const val FIVE_YEAR = "10 years and older"
+
+
+    val CIGARRETTES_LIST : ArrayList<String> = arrayListOf(ONE_CIGARRETTES_OPTION, TWO_CIGARRETTES_OPTION, THREE_CIGARRETTES_OPTION)
+    val CIGARRETTES_AGO_LIST: ArrayList<String> = arrayListOf(ONE_YEAR, TWO_YEAR, THREE_YEAR, FOUR_YEAR, FIVE_YEAR)
+
     val HAND_LIST: ArrayList<String> = arrayListOf(RIGHT, LEFT, BOTH)
     val GENDER_LIST: ArrayList<String> = arrayListOf(MALE, FEMALE)
     val YES_NO_LIST: ArrayList<String> = arrayListOf(YES, NO)
@@ -86,5 +100,7 @@ object EnglishConstants {
     val DURATION_LIST: ArrayList<String> = arrayListOf(DAILY, TWO_TIMES_AT_WEEK, THREE_TIMES_AT_WEEK, WEEKENDS)
     val FREQUENCY_LIST: ArrayList<String> = arrayListOf(FIFTEEN_MINUTES, THIRTY_MINUTES, ONE_HOUR, MORE_THAN_ONE_HOUR)
     val PAIN_LEVEL_WORK_LIST: ArrayList<String> = arrayListOf(NOTHING_AT_ALL, LITTLE_INTERFERENCE, SUBSTANTIAL_INTERFERENCE)
+
+    val FREQUENCY_WORK_LIST: List<Int> = (1.. 24).toList()
 
 }

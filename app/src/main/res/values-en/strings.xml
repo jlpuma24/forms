@@ -119,25 +119,25 @@
 
     <string name="info_post">The information is ready to be sent to the server according to the answers, do you want to continue?</string>
     <string name="reports">Reports</string>
-    <string name="find_report">Buscar reporte</string>
+    <string name="find_report">Find report</string>
     <string name="error_report">There was an error when requesting the report, the employee does not exist in the database.</string>
     <string name="score">Score</string>
     <string name="subdomain">Sub-Domain</string>
     <string name="d1">D1 personal information</string>
-    <string name="d2">D2 Hábitos y estilo de vida</string>
+    <string name="d2">D2 Habits and lifestyle</string>
     <string name="cigarretes_consume">Tobacco use</string>
     <string name="cigarretes_consume_time">Tobacco use time</string>    
     <string name="exercise_consume">Physical activity frequency</string>    
     <string name="exercise_consume_time">Duration of physical activity</string>
-    <string name="d3">D3 Características del trabajo</string>
-    <string name="d4">D4 Estado de salud</string>
+    <string name="d3">D3 Work characteristics</string>
+    <string name="d4">D4 Health state</string>
 
     <!--Common fragment-->
 
     <string name="common.title">Neck</string>
     <string name="common.first">\u2022 According to the body parts you identify on each chart, select the places where you have discomfort:</string>
     <string name="common.left_side">Left side</string>
-    <string name="common.right_side">Right sideo</string>
+    <string name="common.right_side">Right side</string>
     <string name="common.both">Both</string>
     <string name="common.question_a">1. I have discomfort in my %1$s</string>
     <string name="common.question_b">2. They are usually presented as:</string>
@@ -147,6 +147,18 @@
     <string name="common.question_f">6. If you have PAIN, then select its INTENSITY:</string>
     <string name="common.question_g">7. If you experienced discomfort, pain, or distress, how uncomfortable was this?</string>
     <string name="common.question_h">8. If you experienced pain, how much did it interfere with your ability to work?</string>
+
+    <string name="permission_denied">Permission Denied</string>
+
+    <string name="hours_worked">Worked hours</string>
+    <string name="week_duration">Week duration</string>
+    <string name="polifunctionality">Polifunctionality</string>
+
+    <string name="one_d4"> Symptom characteristic</string>
+    <string name="two_d4"> Manifestation of the symptom</string>
+    <string name="three_d4"> Temporality of the symptom</string>
+    <string name="four_d4"> Permanence of the symptom</string>    
+    <string name="five_d4"> Intensity of the symptom</string>
 
 </resources>
 

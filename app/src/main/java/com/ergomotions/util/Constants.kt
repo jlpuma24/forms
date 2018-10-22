@@ -87,6 +87,19 @@ object Constants {
     private const val SUPERVISOR = "Supervisor"
     private const val ADMINISTRATOR = "Administrador"
 
+    private const val ONE_CIGARRETTES_OPTION = "De 1 a 5 cigarrillos"
+    private const val TWO_CIGARRETTES_OPTION = "De 6 a 15 cigarrillos"
+    private const val THREE_CIGARRETTES_OPTION = "16 o mas cigarrillos"
+
+    private const val ONE_YEAR = "Menos de 1 año"
+    private const val TWO_YEAR = "1 a 2 años"
+    private const val THREE_YEAR = "3 a 4 años"
+    private const val FOUR_YEAR = "5 a 9 años"
+    private const val FIVE_YEAR = "10 años o más"
+
+    val CIGARRETTES_LIST : ArrayList<String> = arrayListOf(ONE_CIGARRETTES_OPTION, TWO_CIGARRETTES_OPTION, THREE_CIGARRETTES_OPTION)
+    val CIGARRETTES_AGO_LIST: ArrayList<String> = arrayListOf(ONE_YEAR, TWO_YEAR, THREE_YEAR, FOUR_YEAR, FIVE_YEAR)
+
     val HAND_LIST : ArrayList<String> = arrayListOf(RIGHT, LEFT, BOTH)
     val GENDER_LIST: ArrayList<String> = arrayListOf(MALE, FEMALE)
     val YES_NO_LIST: ArrayList<String> = arrayListOf(YES, NO)
@@ -103,6 +116,7 @@ object Constants {
     val JOB_JOURNEY_LIST: ArrayList<String> = arrayListOf(FIRST_RANGE, SECOND_RANGE, THIRD_RANGE, FOUR_RANGE, EIGHT_RANGE, NINE_RANGE, TEN_RANGE)
     val DURATION_LIST: ArrayList<String> = arrayListOf(DAILY, TWO_TIMES_AT_WEEK, THREE_TIMES_AT_WEEK, WEEKENDS)
     val FREQUENCY_LIST: ArrayList<String> = arrayListOf(FIFTEEN_MINUTES, THIRTY_MINUTES, ONE_HOUR, MORE_THAN_ONE_HOUR)
+    val FREQUENCY_WORK_LIST: List<Int> = (1.. 24).toList()
     val PAIN_LEVEL_WORK_LIST: ArrayList<String> = arrayListOf(NOTHING_AT_ALL, LITTLE_INTERFERENCE, SUBSTANTIAL_INTERFERENCE)
 
     private lateinit var reportResponse: ReportResponse

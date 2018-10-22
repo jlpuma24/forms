@@ -125,9 +125,9 @@
     <string name="score">Nota</string>
     <string name="subdomain">Sub-Dominio</string>
     <string name="d1">D1 Información personal</string>
-    <string name="d2">D2 Habits and lifestyle </string>
-    <string name="d3">D3 Characteristics of work</string>
-    <string name="d4">D4 Health condition</string>
+    <string name="d2">D2 Hábitos y estilo de vida</string>
+    <string name="d3">D3 Caracteristicas del trabajo</string>
+    <string name="d4">D4 Estado de salud</string>
     <string name="cigarretes_consume">Consumo de tabaco</string>
     <string name="cigarretes_consume_time">Tiempo de consumo de tabaco</string>
     <string name="exercise_consume">Frecuencia de actividad física</string>
@@ -147,6 +147,19 @@
     <string name="common.question_f">6. Si presenta DOLOR seleccione a continuación la INTENSIDAD del mismo:</string>
     <string name="common.question_g">7. Si usted experimentó molestias, dolor ¿Qué tan incómodo era esto?</string>
     <string name="common.question_h">8. Si usted experimentó dolor, ¿Cuánto  interfirió con su habilidad para trabajar?</string>
+
+    <string name="permission_denied">Permiso negado, por favor intente de nuevo.</string>
+
+    <string name="hours_worked">Número de horas trabajadas</string>
+    <string name="week_duration">Duración semanal</string>
+    <string name="polifunctionality">Polifuncionalidad</string>
+
+    <string name="one_d4">Característica del síntoma</string>
+    <string name="two_d4">Manifestación del síntoma</string>
+    <string name="three_d4">Temporalidad del síntoma</string>
+    <string name="four_d4">Permanencia del síntoma</string>
+    <string name="five_d4">Intensidad del síntoma</string>
+
 
 </resources>
 

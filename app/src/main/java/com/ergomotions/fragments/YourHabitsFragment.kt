@@ -32,11 +32,15 @@ class YourHabitsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+
         spinner_how_many_cigarretes.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, Constants.getHowManyCigarretesList())
+                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+            Constants.CIGARRETTES_LIST else EnglishConstants.CIGARRETTES_LIST)
+
         spinner_how_much_cigarretes.adapter = ArrayAdapter<String>(context,
                 android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
-            Constants.PAIN_AGO_LIST else EnglishConstants.PAIN_AGO_LIST)
+            Constants.CIGARRETTES_AGO_LIST else EnglishConstants.CIGARRETTES_AGO_LIST)
+
         spinner_excercise_frequency.adapter = ArrayAdapter<String>(context,
                 android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
             Constants.DURATION_LIST else EnglishConstants.DURATION_LIST)
@@ -62,7 +66,7 @@ class YourHabitsFragment : Fragment() {
     fun getInfo(): ThirdInformation {
         return when {
             view != null -> ThirdInformation(getSmokeViewPair().getCheckedPositionOrThrowException("Especificar si fuma"),
-                    (spinner_how_many_cigarretes.getSelectedValue() as String).toInt(),
+                    (spinner_how_many_cigarretes.selectedItemPosition),
                     (spinner_how_much_cigarretes.getSelectedValue() as String),
                     getPhysicViewPair().getCheckedPositionOrThrowException("Especificar si hace actividad física"),
                     (spinnerActivityName.getSelectedValue() as String),
