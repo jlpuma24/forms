@@ -29,11 +29,11 @@ class YourWorkFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         spinner_job_journey.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item,
+                R.layout.row_adapter,
                 if (Locale.getDefault().language != "en") Constants.JOB_JOURNEY_LIST else EnglishConstants.JOB_JOURNEY_LIST)
 
         spinner_job_journey_duration.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item,
+                R.layout.row_adapter,
                 if (Locale.getDefault().language != "en") Constants.FREQUENCY_WORK_LIST.map { it.toString() } else EnglishConstants.FREQUENCY_WORK_LIST.map { it.toString() })
     }
 

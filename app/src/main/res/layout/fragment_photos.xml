@@ -5,35 +5,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/photo"
-        android:layout_width="@dimen/photo_width"
-        android:layout_height="@dimen/photo_height"
-        android:src="@drawable/photo_camera" />
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="@dimen/photo_width"
+            android:layout_height="@dimen/photo_height"
+            android:src="@drawable/photo_camera" />
 
-    <TextView
-        android:id="@+id/copy_photo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="18dp"
-        android:gravity="center"
-        android:text="@string/photos_copy"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/copy_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:gravity="center"
+            android:text="@string/photos_copy"
+            android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/buttonAddPhoto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="#4989d8"
-        android:text="@string/take_photos"
-        android:textAllCaps="true"
-        android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/photosTaken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Tomadas: 1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonAddPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#4989d8"
+            android:text="@string/take_photos"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 

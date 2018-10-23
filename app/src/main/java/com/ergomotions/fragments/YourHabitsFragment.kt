@@ -34,21 +34,21 @@ class YourHabitsFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
 
         spinner_how_many_cigarretes.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.CIGARRETTES_LIST else EnglishConstants.CIGARRETTES_LIST)
 
         spinner_how_much_cigarretes.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.CIGARRETTES_AGO_LIST else EnglishConstants.CIGARRETTES_AGO_LIST)
 
         spinner_excercise_frequency.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.DURATION_LIST else EnglishConstants.DURATION_LIST)
         spinner_duration.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.FREQUENCY_LIST else EnglishConstants.FREQUENCY_LIST)
         spinnerActivityName.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.ACTIVITIES else EnglishConstants.ACTIVITIES)
     }
 

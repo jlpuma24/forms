@@ -160,6 +160,9 @@
     <string name="four_d4">Permanencia del síntoma</string>
     <string name="five_d4">Intensidad del síntoma</string>
 
+    <string name="d4_copy">Partes del cuerpo a continuación:</string>
+    <string name="photos_copy_alert">Es necesario tomar tres fotos para poder enviar la información.</string>
+    <string name="taken_photos">Tomadas: %s</string>
+    <string name="photos_already_taken">Las tres fotos del puesto del trabajo fueron tomadas.</string>
 
 </resources>
-

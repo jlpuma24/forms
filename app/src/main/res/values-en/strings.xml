@@ -160,5 +160,10 @@
     <string name="four_d4"> Permanence of the symptom</string>    
     <string name="five_d4"> Intensity of the symptom</string>
 
+    <string name="d4_copy">Body parts next:</string>
+    <string name="photos_copy_alert">It is necessary to take three photos to be able to send the information.</string>
+    <string name="taken_photos">Taked: %s</string>
+    <string name="photos_already_taken">The tree photos of job spot was already taken.</string>
+
 </resources>
 

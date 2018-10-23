@@ -103,7 +103,7 @@ class EditEmployeeActivity : AppCompatActivity() {
         editTextAge.setText(intent.getStringExtra("employeeAge"))
 
         editTextArea.adapter = ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.AREAS else EnglishConstants.AREAS)
 
         val englishIndex = EnglishConstants.AREAS.indexOfFirst { it == intent.getStringExtra("employeeDependency") }

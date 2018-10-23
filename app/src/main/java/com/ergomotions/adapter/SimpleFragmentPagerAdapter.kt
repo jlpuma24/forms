@@ -14,6 +14,7 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
     val workFragment = YourWorkFragment()
     val habitsFragment = YourHabitsFragment()
     val healthFragment = HealthStateFragment()
+    val takePhotosFragment = TakePhotosFragment()
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
@@ -36,7 +37,7 @@ class SimpleFragmentPagerAdapter (private var mContext: Context, fm: FragmentMan
             16 -> GeneralFragment.newInstance(GeneralFragment.KNEE)
             17 -> GeneralFragment.newInstance(GeneralFragment.LEG)
             18 -> GeneralFragment.newInstance(GeneralFragment.FOOT)
-            19 -> TakePhotosFragment()
+            19 -> takePhotosFragment
             else -> CompanyReportFragment()
         }
     }

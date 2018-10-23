@@ -69,7 +69,7 @@ class EmployeeInfoFragment : Fragment() {
         })
 
         spinnerArea?.adapter = ArrayAdapter<String>(context,
-                android.R.layout.simple_spinner_item, if (Locale.getDefault().language != "en")
+                R.layout.row_adapter, if (Locale.getDefault().language != "en")
             Constants.AREAS else EnglishConstants.AREAS)
 
         return view

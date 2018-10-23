@@ -14,7 +14,6 @@ import com.ergomotions.BuildConfig
 import com.ergomotions.R
 import com.ergomotions.adapter.SimpleFragmentPagerAdapter
 import com.ergomotions.network.ApiService
-import com.ergomotions.network.CompanyResponse
 import com.ergomotions.network.EmployeeRequest
 import com.ergomotions.network.EmployeeRequestWrapper
 import com.ergomotions.network.EmployeeResponse
@@ -46,6 +45,8 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
     @Inject
     lateinit var viewModelMap: @JvmSuppressWildcards Map<String, GeneralViewModel>
 
+    var photosTaken: Int = 0
+
     private val viewPagerAdapter by lazy {
         SimpleFragmentPagerAdapter(this, supportFragmentManager)
     }
@@ -73,7 +74,18 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
             val employee = processEmployeeResponse()
             val bodyParts = processBodyParts()
             if (employee != null) {
-                requestService(EmployeeRequestWrapper(employee, bodyParts))
+                if (photosTaken == 3) {
+                    requestService(EmployeeRequestWrapper(employee, bodyParts))
+                } else {
+                    val builder = AlertDialog.Builder(this)
+                    builder.setMessage(getString(R.string.photos_copy_alert))
+                    builder.setCancelable(false)
+                    builder.setPositiveButton(getString(android.R.string.yes)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    val alert = builder.create()
+                    alert.show()
+                }
             }
             dialog.dismiss()
         }
@@ -164,13 +176,13 @@ class AddEmployeeActivity : AppCompatActivity(), HasSupportFragmentInjector {
         }
     }
 
-
     @Throws(Throwable::class)
     private fun SimpleFragmentPagerAdapter.getChildInformation(): EmployeeRequest {
         val firstInfo = employeeFragment.getInfo()
         val secondInfo = workFragment.getInfo()
         val thirdInfo = habitsFragment.getInfo()
         val forthInfo = healthFragment.getInfo()
+        photosTaken = takePhotosFragment.getInfo()
         return EmployeeRequest(-1, firstInfo.name, firstInfo.lastName, firstInfo.identification, firstInfo.weight,
                 firstInfo.height, firstInfo.gender, firstInfo.age, firstInfo.monthsCompany,
                 firstInfo.yearsCompany, firstInfo.dependency, firstInfo.dominance,
