@@ -8,4 +8,11 @@
         android:title="@string/uplodad_form"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/action_chart"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_pie_chart_white_24"
+        android:title="@string/uplodad_form"
+        app:showAsAction="always" />
+
 </menu>

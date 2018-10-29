@@ -1,5 +1,6 @@
 package com.ergomotions.activity
 
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -19,6 +20,10 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
+import android.widget.Toast
+import android.content.DialogInterface
+import android.net.Uri
+
 
 class EmployeeMainActivity: AppCompatActivity() {
 
@@ -51,8 +56,37 @@ class EmployeeMainActivity: AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        startActivity(Intent(this, ReportsActivity::class.java))
-        finish()
+        when (item?.itemId) {
+          R.id.action_refresh -> {
+              startActivity(Intent(this, ReportsActivity::class.java))
+              finish()
+          }
+          R.id.action_chart -> {
+              val builder = AlertDialog.Builder(this@EmployeeMainActivity)
+
+              val colors = arrayOf(getString(R.string.age_chart), getString(R.string.dominance_chart), getString(R.string.imc_chart))
+
+              builder.setTitle(getString(R.string.pick_variables))
+              var selectedIndex = 0
+
+              builder.setMultiChoiceItems(colors, null) { _, which, _ ->
+                selectedIndex = which + 1
+              }
+
+              builder.setPositiveButton(getString(R.string.accept)) { dialog, _ ->
+                  val browserIntent = Intent("android.intent.action.VIEW", Uri.parse("http://ec2-52-14-239-106.us-east-2.compute.amazonaws.com:8001/api/charts/"+selectedIndex.toString()+"/0"))
+                  startActivity(browserIntent)
+                  dialog.dismiss()
+              }
+
+              builder.setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                  dialog.dismiss()
+              }
+
+              val dialog = builder.create()
+              dialog.show()
+          }
+        }
         return super.onOptionsItemSelected(item)
     }
 

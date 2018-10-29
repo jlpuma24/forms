@@ -165,4 +165,12 @@
     <string name="taken_photos">Tomadas: %s</string>
     <string name="photos_already_taken">Las tres fotos del puesto del trabajo fueron tomadas.</string>
 
+    <string name="exit_survey">Al salir del formulario toda la información que fue diligenciada se perderá. ¿Desea continuar?</string>
+
+    <string name="pick_variables">Seleccione las variables para generar el reporte.</string>
+
+    <string name="age_chart">Grupo de edad</string>
+    <string name="dominance_chart">Dominancia</string>
+    <string name="imc_chart">Clasificación IMC</string>
+
 </resources>

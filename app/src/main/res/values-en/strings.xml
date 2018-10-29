@@ -165,5 +165,12 @@
     <string name="taken_photos">Taked: %s</string>
     <string name="photos_already_taken">The tree photos of job spot was already taken.</string>
 
-</resources>
+    <string name="exit_survey">Leaving the form, all the information that was filled in will be lost. Do you want to continue?</string>
 
+    <string name="pick_variables">Pick variable to generate the report.</string>
+
+    <string name="age_chart">Age group</string>
+    <string name="dominance_chart">Dominance</string>
+    <string name="imc_chart">IMC score</string>
+
+</resources>
