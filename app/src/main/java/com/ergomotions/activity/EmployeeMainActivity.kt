@@ -20,10 +20,6 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.*
-import android.widget.Toast
-import android.content.DialogInterface
-import android.net.Uri
-
 
 class EmployeeMainActivity: AppCompatActivity() {
 
@@ -64,18 +60,32 @@ class EmployeeMainActivity: AppCompatActivity() {
           R.id.action_chart -> {
               val builder = AlertDialog.Builder(this@EmployeeMainActivity)
 
-              val colors = arrayOf(getString(R.string.age_chart), getString(R.string.dominance_chart), getString(R.string.imc_chart))
+              val colors = arrayOf(getString(R.string.age_chart), getString(R.string.dominance_chart), getString(R.string.imc_chart),
+                      getString(R.string.charge_chart),
+                      getString(R.string.smoke_chart),
+                      getString(R.string.cigarrettes_chart),
+                      getString(R.string.cigarrettes_time_chart),
+                      getString(R.string.physical_activity_chart),
+                      getString(R.string.frequency_physical_activity_chart),
+                      getString(R.string.duration_physical_activity_chart),
+                      getString(R.string.hours_worked_chart),
+                      getString(R.string.variable_hours_worked_chart),
+                      getString(R.string.pain_chart),
+                      getString(R.string.sick_chart))
 
               builder.setTitle(getString(R.string.pick_variables))
+
               var selectedIndex = 0
 
-              builder.setMultiChoiceItems(colors, null) { _, which, _ ->
-                selectedIndex = which + 1
+              builder.setSingleChoiceItems(colors, -1) { _, which ->
+                  selectedIndex = which + 1
               }
 
               builder.setPositiveButton(getString(R.string.accept)) { dialog, _ ->
-                  val browserIntent = Intent("android.intent.action.VIEW", Uri.parse("http://ec2-52-14-239-106.us-east-2.compute.amazonaws.com:8001/api/charts/"+selectedIndex.toString()+"/0"))
-                  startActivity(browserIntent)
+                  val intent = Intent(this@EmployeeMainActivity, WebViewActivity::class.java)
+                  intent.putExtra("url", "http://ec2-52-14-239-106.us-east-2.compute.amazonaws.com:8001/api/charts/"+selectedIndex.toString()+"/0")
+                  startActivity(intent)
+                  finish()
                   dialog.dismiss()
               }
 

@@ -9,9 +9,7 @@ import kotlinx.android.synthetic.main.activity_edit_employee.*
 import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.ArrayAdapter
-import com.ergomotions.BuildConfig
 import com.ergomotions.network.ApiService
 import com.ergomotions.network.EmployeeRequest
 import com.ergomotions.network.EmployeeResponse
@@ -171,5 +169,4 @@ class EditEmployeeActivity : AppCompatActivity() {
     }
 
     private fun getDominance() = "0".takeIf { button_option_right.isChecked } ?: "1".takeIf { button_option_left.isChecked } ?: "2".takeIf { button_option_both.isChecked } ?: ""
-
 }

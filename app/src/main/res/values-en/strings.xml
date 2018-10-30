@@ -88,13 +88,13 @@
     <string name="photos_copy">Please take and upload \n3 photos of the job post</string>
     <string name="take_photos">Take photos</string>
     <string name="company_report">Company report</string>
-    
+
     <string name="company">Company</string>
     <string name="contact_responsable">Contact responsible</string>
     <string name="cut_date">Cut Date</string>
     <string name="professional_analyst">Professional analyst</string>
     <string name="town">Town</string>
-    
+
     <string name="section_one">Section I</string>
     <string name="company_characterization">COMPANY CHARACTERIZATION</string>
     <string name="general_data_company">General data company</string>
@@ -167,10 +167,22 @@
 
     <string name="exit_survey">Leaving the form, all the information that was filled in will be lost. Do you want to continue?</string>
 
-    <string name="pick_variables">Pick variable to generate the report.</string>
+    <string name="discrete_titles">Discretes variables report</string>
+    <string name="pick_variables">Discretes variables report: Pick variable to generate the report.</string>
 
     <string name="age_chart">Age group</string>
     <string name="dominance_chart">Dominance</string>
     <string name="imc_chart">IMC score</string>
+    <string name="charge_chart"> Oldness </string>    
+    <string name="smoke_chart"> Smoking </string>    
+    <string name="cigarrettes_chart"> Cigarettes a day </string>    
+    <string name="cigarrettes_time_chart"> How long ago do you smoke </string>    
+    <string name="physical_activity_chart"> Perform physical activity </string>    
+    <string name="frequency_physical_activity_chart"> Frequency of physical activity </string>    
+    <string name="duration_physical_activity_chart"> Physical activity duration </string>    
+    <string name="hours_worked_chart"> Daily hours worked </string>    
+    <string name="variable_hours_worked_chart"> Variable work duration </string>    
+    <string name="pain_chart"> Pain or discomfort in the body </string>    
+    <string name="sick_chart"> Current illnesses </string>
 
 </resources>
