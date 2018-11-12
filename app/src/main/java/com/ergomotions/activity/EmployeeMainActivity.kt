@@ -53,6 +53,45 @@ class EmployeeMainActivity: AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+          R.id.action_dispersion -> {
+              val builder = AlertDialog.Builder(this@EmployeeMainActivity)
+
+              val colors = arrayOf(getString(R.string.age),
+                      getString(R.string.weight),
+                      getString(R.string.height),
+                      getString(R.string.imc),
+                      getString(R.string.since),
+                      getString(R.string.hours_worked_chart))
+
+              builder.setTitle(getString(R.string.pick_variables_cont))
+
+              var selectedIndex = 0
+
+              builder.setSingleChoiceItems(colors, -1) { _, which ->
+                  selectedIndex = which + 1
+              }
+
+              builder.setPositiveButton(getString(R.string.accept)) { dialog, _ ->
+                  val intent = Intent(this@EmployeeMainActivity, WebViewActivity::class.java)
+                  intent.putExtra("url", "http://ec2-52-14-239-106.us-east-2.compute.amazonaws.com:8001/api/graphs/"+selectedIndex.toString()+"/0")
+                  startActivity(intent)
+                  finish()
+                  dialog.dismiss()
+              }
+
+              builder.setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
+                  dialog.dismiss()
+              }
+
+              val dialog = builder.create()
+              dialog.show()
+          }
+          R.id.action_bars -> {
+              val intent = Intent(this@EmployeeMainActivity, WebViewActivity::class.java)
+              intent.putExtra("url", "http://ec2-52-14-239-106.us-east-2.compute.amazonaws.com:8001/api/cluster")
+              startActivity(intent)
+              finish()
+          }
           R.id.action_refresh -> {
               startActivity(Intent(this, ReportsActivity::class.java))
               finish()
@@ -71,7 +110,11 @@ class EmployeeMainActivity: AppCompatActivity() {
                       getString(R.string.hours_worked_chart),
                       getString(R.string.variable_hours_worked_chart),
                       getString(R.string.pain_chart),
-                      getString(R.string.sick_chart))
+                      getString(R.string.sick_chart),
+                      getString(R.string.gender),
+                      getString(R.string.name_graph),
+                      getString(R.string.lastname_graph),
+                      getString(R.string.identification_graph))
 
               builder.setTitle(getString(R.string.pick_variables))
 

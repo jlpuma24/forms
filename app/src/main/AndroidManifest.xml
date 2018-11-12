@@ -29,8 +29,7 @@
             android:name=".activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.WebViewActivity"
-            android:screenOrientation="portrait" />
+            android:name=".activity.WebViewActivity" />
         <activity
             android:name=".activity.ReportDisplayActivity"
             android:screenOrientation="portrait" />

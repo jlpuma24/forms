@@ -15,4 +15,19 @@
         android:title="@string/uplodad_form"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/action_bars"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_bar_chart_white_24"
+        android:title="@string/uplodad_form"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/action_dispersion"
+        android:orderInCategory="100"
+        android:icon="@drawable/baseline_timeline_white_24"
+        android:title="@string/uplodad_form"
+        app:showAsAction="always" />
+
 </menu>

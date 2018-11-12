@@ -169,6 +169,7 @@
 
     <string name="discrete_titles">Reporte variables discretas</string>
     <string name="pick_variables">Reporte variables discretas: Seleccione la variable para generar el reporte.</string>
+    <string name="pick_variables_cont">Reporte variables continuas: Seleccione la variable para generar el reporte.</string>
 
     <string name="age_chart">Grupo de edad</string>
     <string name="dominance_chart">Dominancia</string>
@@ -184,5 +185,10 @@
     <string name="variable_hours_worked_chart">Duración de trabajo variable</string>
     <string name="pain_chart">Dolor o molestia en el cuerpo</string>
     <string name="sick_chart">Enfermedades actuales</string>
+
+    <string name="gender">Género</string>
+    <string name="name_graph">Nombre</string>
+    <string name="lastname_graph">Apellido</string>
+    <string name="identification_graph">Identificación</string>
 
 </resources>
